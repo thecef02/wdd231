@@ -1,0 +1,61 @@
+/* ------------COLORS------------ */
+:root {
+    --terracotta: #e07a5f;
+    --deep-slate-blue: #3d405b;
+    --primary: #0a9396;
+    --secondary: #94d2bd;
+    --accent: #ee9b00;
+    --background: #fefae0;
+    --text: #001219;
+}
+* {
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Roboto, Helvetica, sans-serif;
+    font-weight: 400;
+}
+
+/***************** HEADER *****************/
+header {
+    display: grid;
+    grid-template-columns: 24px auto 44px;
+    padding: 5px 0 5px 10px;
+    align-items: end;
+    border-bottom: solid 1px #ddd;
+    column-gap: 8px;
+}
+header img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+header span {
+    font-size: 1.2rem;
+    color: var(--deep-slate-blue);
+    font-weight: 500;
+}
+
+/***************** NAVIGATION *****************/
+.hamburger {
+    background: none;
+    border: none;
+    color: var(--deep-slate-blue);
+    cursor: pointer;
+}
+
+.hamburger::after {
+    content: "\2630";
+    font-size: 2rem;
+}
+
+.hamburger::before {
+    content: "\2630";
+}
+
+.hamburger.show::before {
+    content: "\00D7";
+}
+
+
