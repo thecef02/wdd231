@@ -18,16 +18,84 @@
     <link rel="stylesheet" href="normalize.css">
     <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/larger.css">
-
+    <script src="scripts/courses.js" defer></script>
+    <script src="scripts/core.js" defer></script>
 </head>
 <body>
     <header>
         <img src="images/logo.svg" alt="site logo" width="1" height="1">
-        <span>The Site Name</span>
+        <span>Cristian E. Fernandez</span>
         <button id="nav-button" class="hamburger" aria-label="navigation"></button>
     </header>
-    <nav></nav>
-    <main></main>
-    <footer></footer>
+    <nav><ul>
+        <li class="current"><a href="#">Home</a></li>
+        <li><a href="#">Chamber Project</a></li>
+        <li><a href="#">Final Project</a></li>
+    </ul></nav>
+    <main>
+        <h1>Home</h1>
+        <section class="me">
+            <div class="card-top">
+                <div class="card-title">
+                    <h2>About Me</h2>
+                    <p>
+                        My name is Cristian Fernandez. I was born in Mendoza, Argentina, and lived there with my family until 2000, when I moved
+                        to the United States.
+                        I currently work in Inventory Control at Nestlé. I enjoy programming and creating new tools to make my job easier.
+                        I also love traveling and playing racquetball.
+                    </p>
+                </div>
+                <div class="card-title">
+                    <h2>Student Photo</h2>
+                    <img src="images/cristianf.jpg" alt="Portrait of Cristian" width="146" height="200" loading="lazy">
+                </div>
+            </div>
+        </section>
+
+
+        <section class="card-courses">
+            <div class="card-title">
+                <h2>Web Certificate Courses</h2>
+            </div>
+            
+            <div class="card-filter">
+                <button class="filter-button" aria-label="Filter courses by category">All</button>
+                <button class="filter-button" aria-label="Filter courses by category">WDD</button>
+                <button class="filter-button" aria-label="Filter courses by category">CSE</button>
+            </div>        
+        
+            <div id="courses-container" class="card-container">
+                <!-- Course cards will be dynamically inserted here -->
+                
+            </div>
+        
+        </section>
+    </main>
+    <footer>
+        <div class="social-links">
+            <a href="https://github.com/your-github-username" target="_blank" rel="noopener noreferrer">
+                <img src="images/github.svg" alt="GitHub icon">
+            </a>
+            <a href="https://www.linkedin.com/in/your-linkedin-username" target="_blank" rel="noopener noreferrer">
+                <img src="images/linkedin.svg" alt="LinkedIn icon">
+            </a>
+            <a href="https://www.facebook.com/your-facebook-username" target="_blank" rel="noopener noreferrer">
+                <img src="images/facebook.svg" alt="Facebook icon">
+            </a>
+            <a href="https://www.instagram.com/your-instagram-username" target="_blank" rel="noopener noreferrer">
+                <img src="images/instagram.svg" alt="Instagram icon">
+            </a>
+            <a href="https://twitter.com/your-twitter-username" target="_blank" rel="noopener noreferrer">
+                <img src="images/twitter-x.svg" alt="Twitter icon">
+            </a>
+            <a href="https://teams.microsoft.com/your-teams-link" target="_blank" rel="noopener noreferrer">
+                <img src="images/microsoft-teams.svg" alt="Microsoft Teams icon">
+            </a>
+        </div>
+        <div class="last-updated">
+                <p>&copy; <span id="currentyear"></span></p>
+                <p id="lastModified"></p>
+        </div>
+    </footer>
 </body>
 </html>
