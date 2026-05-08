@@ -27,7 +27,6 @@ header {
     align-items: end;
     border-bottom: solid 1px #ddd;
     column-gap: 8px;
-    position: relative;
 }
 header img {
     display: block;
@@ -109,12 +108,12 @@ nav a {
 
 nav a:hover {
     background: var(--terracotta);
-    color: white;
+    color: var(--text);
 }
 
 nav li.current a {
     background: var(--terracotta);
-    color: white;
+    color: var(--text);
     font-weight: 700;
 }
 

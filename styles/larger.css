@@ -43,7 +43,7 @@
 
     nav li.current a {
         background: var(--terracotta);
-        color: white;
+        color: var(--text);
     }
 
     .card-top {
