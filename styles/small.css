@@ -120,6 +120,17 @@ nav li.current a {
 /******************** End Nav Menu ********************/
 
 
+#total-credits{
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--text);
+    width: 100%;
+    text-align: center;
+}
+
+
+
 /******************** sections ********************/
 
 .card-top {

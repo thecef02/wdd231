@@ -74,7 +74,12 @@ const filterButtons = document.querySelectorAll(".filter-button");
 
 function renderCourses(courseList) {
     if (!coursesContainer) return;
-
+    let totCredits = 0;
+    courseList.forEach((course) => {
+        totCredits += course.credits || 0;
+    });
+    const totCreditsElement = document.querySelector("#total-credits");
+    totCreditsElement.textContent = `Total Credits: ${totCredits}`;
     coursesContainer.innerHTML = courseList
         .map((course) => {
             const techTags = course.technology
