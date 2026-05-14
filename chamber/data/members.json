@@ -1,0 +1,92 @@
+{
+  "members": [
+    {
+      "id": 1,
+      "name": "Rexburg Mountain Hardware",
+      "address": "142 N Center St, Rexburg, ID 83440",
+      "phone": "(208) 555-0182",
+      "website": "https://www.rexburgmtnhardware.com",
+      "image": "rexburg-mountain-hardware.webp",
+      "membership": 3,
+      "description": "Your local source for tools, building supplies, and outdoor gear since 1998.",
+      "email": "info@rexburgmtnhardware.com"
+    },
+    {
+      "id": 2,
+      "name": "Madison Valley Credit Union",
+      "address": "300 W Main St, Rexburg, ID 83440",
+      "phone": "(208) 555-0247",
+      "website": "https://www.madisonvalleycu.org",
+      "image": "madison-valley-credit-union.webp",
+      "membership": 3,
+      "description": "Community-owned financial institution offering checking, savings, and loans.",
+      "email": "contact@madisonvalleycu.org"
+    },
+    {
+      "id": 3,
+      "name": "Snake River Solar",
+      "address": "87 Industrial Blvd, Rexburg, ID 83440",
+      "phone": "(208) 555-0319",
+      "website": "https://www.snakereversolar.com",
+      "image": "snake-river-solar.webp",
+      "membership": 2,
+      "description": "Residential and commercial solar panel installation across eastern Idaho.",
+      "email": "sales@snakereversolar.com"
+    },
+    {
+      "id": 4,
+      "name": "Teton Brew & Coffee Co.",
+      "address": "55 E 1st N, Rexburg, ID 83440",
+      "phone": "(208) 555-0093",
+      "website": "https://www.tetonbrewcoffee.com",
+      "image": "teton-brew-coffee.webp",
+      "membership": 2,
+      "description": "Craft coffee roastery and café serving locally sourced pastries and sandwiches.",
+      "email": "hello@tetonbrewcoffee.com"
+    },
+    {
+      "id": 5,
+      "name": "Rexburg Family Dental",
+      "address": "210 S 2nd W Ste 4, Rexburg, ID 83440",
+      "phone": "(208) 555-0461",
+      "website": "https://www.rexburgfamilydental.com",
+      "image": "rexburg-family-dental.webp",
+      "membership": 2,
+      "description": "Full-service dental care for all ages, accepting most major insurance plans.",
+      "email": "appointments@rexburgfamilydental.com"
+    },
+    {
+      "id": 6,
+      "name": "Clearwater Tech Solutions",
+      "address": "401 University Blvd, Rexburg, ID 83440",
+      "phone": "(208) 555-0578",
+      "website": "https://www.clearwatertechid.com",
+      "image": "clearwater-tech-solutions.webp",
+      "membership": 1,
+      "description": "IT support, managed services, and custom software development for small businesses.",
+      "email": "support@clearwatertechid.com"
+    },
+    {
+      "id": 7,
+      "name": "High Desert Landscaping",
+      "address": "19 Fir Ave, Rexburg, ID 83440",
+      "phone": "(208) 555-0634",
+      "website": "https://www.highdesertlandscaping.net",
+      "image": "high-desert-landscaping.webp",
+      "membership": 1,
+      "description": "Lawn care, irrigation installation, and drought-tolerant landscape design.",
+      "email": "quote@highdesertlandscaping.net"
+    },
+    {
+      "id": 8,
+      "name": "Pioneer Title & Escrow",
+      "address": "75 W 4th S, Rexburg, ID 83440",
+      "phone": "(208) 555-0712",
+      "website": "https://www.pioneertitleidaho.com",
+      "image": "pioneer-title-escrow.webp",
+      "membership": 3,
+      "description": "Real estate title insurance and closing services serving Madison County.",
+      "email": "closings@pioneertitleidaho.com"
+    }
+  ]
+}

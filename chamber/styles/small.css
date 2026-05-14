@@ -1,0 +1,153 @@
+:root {
+    --terracotta: #e07a5f;
+    --deep-slate-blue: #3d405b;
+    --primary: #0a9396;
+    --secondary: #94d2bd;
+    --accent: #ee9b00;
+    --background: #fefae0;
+    --text: #001219;
+}
+.hamburger {
+    background: none;
+    border: none;
+    color: var(--deep-slate-blue);
+    cursor: pointer;
+}
+.hamburger::before {
+    content: "\2630";
+    font-size: 1.5rem;
+}
+.hamburger.show::before {
+    content: "\00D7";
+}
+
+
+/********************* Header **************************/
+header {
+    margin-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.6rem 1rem;
+    background-color: var(--background);
+}
+
+.header-brand {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    flex: 1;
+}
+
+.header-brand img {
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+}
+
+.header-brand span {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-text);
+}
+
+/* Nav */
+header nav {
+    width: 100%;
+    display: none;
+}
+header nav.show {
+    display: block;
+}
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0rem 1.25rem;
+}
+
+header nav a {
+    /* display: block; */
+    text-decoration: none;
+    padding: 0.75rem 1rem;
+    color: var(--text);
+    font-size: 0.9rem;
+}
+/* nav li {
+    border-bottom: 1px solid var(--terracotta);
+} */
+
+nav li:last-child {
+    border-bottom: none;
+}
+header nav li.current a {
+    background: var(--terracotta);
+    color: var(--text);
+    font-weight: 700;
+}
+
+header nav a:hover {
+    background: var(--terracotta);
+    color: var(--text);
+}
+
+/********************** Theme toggle ****************/
+#theme-toggle {
+    background: none;
+    border: 2px solid var(--color-text);
+    border-radius: 50%;
+    width: 2rem;
+    height: 2rem;
+    font-size: 1rem;
+    cursor: pointer;
+    color: var(--color-text);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    line-height: 1;
+}
+
+
+
+
+/******************** Footer ********************/
+footer {
+    display: flex;
+    flex-direction: column;
+    /* flex-wrap: wrap; */
+    /* justify-content: space-between; */
+    /* align-items: center; */
+    background: var(--background);
+    padding: 1rem 0;
+}
+footer div{
+    margin-top: 1rem;
+}
+footer .social-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    background: var(--background);
+    padding: 1rem 0;
+}
+
+footer .social-links a {
+    display: inline-flex;
+}
+
+footer .social-links img {
+    display: block;
+    width: 48px;
+    height: auto;
+}
+
+footer p, .chamber-info h3, .last-updated p {
+    margin: 0.25rem 0;
+    padding-left: 1rem;
+}

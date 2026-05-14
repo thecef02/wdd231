@@ -1,0 +1,57 @@
+/* ── Large screen overrides (≥ 640px) ── */
+
+@media (min-width: 320px) {
+    header {
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        /* height: 200px; */
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+    nav {
+        display: block;
+            position: static;
+            width: 100%;
+            background: var(--background);
+            padding: 0 1rem;
+            margin-top: 1rem;
+    }
+
+    .nav-holder {
+        display: flex;
+        align-items: center;
+    }
+
+    .header-brand {
+        flex: 0 0 auto;
+    }
+
+    header nav {
+        width: auto;
+    }
+
+    header nav ul {
+        gap: 1.5rem;
+    }
+
+    header nav a {
+        font-size: 0.95rem;
+    }
+
+    footer {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        background: var(--background);
+        padding: 1rem 0;
+    }
+
+    footer div {
+        width: 33%;
+    }
+}

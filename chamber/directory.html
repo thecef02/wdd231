@@ -1,32 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WDD 231 - Web Frontend Development I - Cristian Fernandez</title>
-    <meta name="description" content="WDD 231 - Web Frontend Development I. Apply the concepts to a page that is responsive in both small and larger views." />
+    <meta name="description"
+        content="WDD 231 - Web Frontend Development I. Apply the concepts to a page that is responsive in both small and larger views." />
     <meta name="author" content="Cristian Fernandez" />
 
     <meta property="og:title" content="Chamber of Commerce Directory">
-    <meta property="og:description" content="The American Fork chamber of commerce is a local organization of businesses that work together to strengthen the business interests of the group." />
+    <meta property="og:description"
+        content="The American Fork chamber of commerce is a local organization of businesses that work together to strengthen the business interests of the group." />
     <meta property="og:url" content="https://thecef02.github.io/wdd231/chamber/directory.html">
     <meta property="og:image" content="https://thecef02.github.io/wdd231/chamber/images/logo.svg">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+        media="print" onload="this.media='all'">
     <noscript>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
     </noscript>
     <link rel="icon" href="images/favicon.ico">
-    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/larger.css">
-    <script src="scripts/courses.js" defer></script>
+    <script src="scripts/script.js" defer></script>
     <script src="scripts/core.js" defer></script>
 </head>
+
 <body>
-    
+    <header>
+        <div class="header-brand">
+            <img src="images/logo.svg" alt="American Fork Chamber of Commerce logo" width="50" height="50">
+            <span>American Fork Chamber of Commerce</span>
+        </div>
+        <div class="nav-holder">
+            <nav>
+                <ul>
+                    <li class="current"><a href="index.html">Home</a></li>
+                    <li><a href="directory.html">Directory</a></li>
+                    <li><a href="join.html">Join</a></li>
+                    <li><a href="discover.html">Discover</a></li>
+                </ul>
+            </nav>
+            <button id="theme-toggle" aria-label="Toggle dark mode">&#9680;</button>
+            <button id="nav-button" class="hamburger" aria-label="navigation"></button>
+        </div>
+    </header>
+    <main>
+        <h1>H1</h1>
+        <section class="me">
+
+
+        </section>
+    </main>
+    <footer>
+        <div class="chamber-info">
+            <h3>American Fork Chamber of Commerce</h3>
+            <p>123 Main Street, American Fork</p>
+            <p>UT 84003, USA</p>
+            <p>Email: info@americanforkchamber.com</p>
+            <p>Phone: (801) 123-4567 </p>
+        </div>
+        <div class="social-links">
+            <a href="https://github.com/thecef02" target="_blank" rel="github">
+                <img src="images/github.svg" alt="Link to GitHub web page">
+            </a>
+            <a href="https://www.linkedin.com/in/cristian-e-fernandez" target="_blank" rel="linkedin">
+                <img src="images/linkedin.svg" alt="Link to LinkedIn page">
+            </a>
+            <a href="https://www.facebook.com/your-facebook-username" target="_blank" rel="facebook">
+                <img src="images/facebook.svg" alt="Link to Facebook page">
+            </a>
+            <a href="https://www.instagram.com/your-instagram-username" target="_blank" rel="instagram">
+                <img src="images/instagram.svg" alt="Link to Instagram page">
+            </a>
+            <!-- <a href="https://twitter.com/your-twitter-username" target="_blank" rel="twitter">
+                <img src="images/twitter-x.svg" alt="Link to Twitter page">
+            </a>
+            <a href="https://teams.microsoft.com/your-teams-link" target="_blank" rel="ms-teams">
+                <img src="images/microsoft-teams.svg" alt="Link to Microsoft Teams page">
+            </a> -->
+        </div>
+        <div class="last-updated">
+            <p>WDD231 - Class Project</p>
+            <p>Cristian Fernandez</p>
+            <p>&copy; <span id="currentyear"></span></p>
+            <p id="lastModified"></p>
+        </div>
+    </footer>
 </body>
+
 </html>
