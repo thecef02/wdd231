@@ -35,6 +35,7 @@
 
     header nav ul {
         gap: 1.5rem;
+        flex-direction: row;
     }
 
     header nav a {

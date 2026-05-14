@@ -60,17 +60,25 @@ header nav {
 header nav.show {
     display: block;
 }
-header nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+/* header nav ul {
     display: flex;
     flex-wrap: wrap;
     gap: 0rem 1.25rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+} */
+header nav ul  {
+    display: block;
+    flex-direction: column;
+        gap: 0rem 1.25rem;
+            margin: 0;
+            /* padding: 0; */
+            list-style: none;
 }
 
 header nav a {
-    /* display: block; */
+    display: block;
     text-decoration: none;
     padding: 0.75rem 1rem;
     color: var(--text);
