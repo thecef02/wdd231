@@ -28,7 +28,7 @@
     <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/larger.css">
     <script src="scripts/script.js" defer></script>
-    <script src="scripts/core.js" defer></script>
+    <script src="scripts/cards.js" defer></script>
 </head>
 
 <body>
@@ -50,13 +50,36 @@
             <button id="nav-button" class="hamburger" aria-label="navigation"></button>
         </div>
     </header>
+
+
+
+
     <main>
-        <h1>H1</h1>
-        <section class="me">
-
-
+        <section class="hero-image">
+            <img src="images/hero-image.jpg" width="600px" height="250px"
+                alt="A group of people working together in an office setting, representing the collaborative spirit of the chamber of commerce.">
+            <div class="hero-button">
+            </div>
+        </section>
+        <section class="middle-content">
+            <h1>Home</h1>
+            <div class="content-holder">
+                <div class="events">
+                </div>
+                <div class="weather">
+                </div>
+            </div>
+        </section>
+        <section class="business-holder">
+            <button id="grid-view" aria-label="Grid view">&#x25A6;</button>
+            <button id="list-view" aria-label="List view">&#x25A4;</button>
+            <div id="#cards" class="business-cards">
+            </div>
         </section>
     </main>
+
+
+
     <footer>
         <div class="chamber-info">
             <h3>American Fork Chamber of Commerce</h3>

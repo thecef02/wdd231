@@ -2,91 +2,91 @@
   "members": [
     {
       "id": 1,
-      "name": "Rexburg Mountain Hardware",
-      "address": "142 N Center St, Rexburg, ID 83440",
-      "phone": "(208) 555-0182",
-      "website": "https://www.rexburgmtnhardware.com",
-      "image": "rexburg-mountain-hardware.webp",
+      "name": "American Fork Hardware & Supply",
+      "address": "85 N Center St, American Fork, UT 84003",
+      "phone": "(801) 756-0182",
+      "website": "https://www.afhardware.com",
+      "image": "af-hardware-supply.webp",
       "membership": 3,
-      "description": "Your local source for tools, building supplies, and outdoor gear since 1998.",
-      "email": "info@rexburgmtnhardware.com"
+      "description": "Your local source for tools, building supplies, and outdoor gear since 1994.",
+      "email": "info@afhardware.com"
     },
     {
       "id": 2,
-      "name": "Madison Valley Credit Union",
-      "address": "300 W Main St, Rexburg, ID 83440",
-      "phone": "(208) 555-0247",
-      "website": "https://www.madisonvalleycu.org",
-      "image": "madison-valley-credit-union.webp",
+      "name": "Utah Valley Community Credit Union",
+      "address": "210 W State St, American Fork, UT 84003",
+      "phone": "(801) 756-0247",
+      "website": "https://www.utvalleycu.org",
+      "image": "utah-valley-credit-union.webp",
       "membership": 3,
-      "description": "Community-owned financial institution offering checking, savings, and loans.",
-      "email": "contact@madisonvalleycu.org"
+      "description": "Community-owned financial institution offering checking, savings, and loans to Utah County residents.",
+      "email": "contact@utvalleycu.org"
     },
     {
       "id": 3,
-      "name": "Snake River Solar",
-      "address": "87 Industrial Blvd, Rexburg, ID 83440",
-      "phone": "(208) 555-0319",
-      "website": "https://www.snakereversolar.com",
-      "image": "snake-river-solar.webp",
+      "name": "Wasatch Solar Solutions",
+      "address": "340 W 500 N, American Fork, UT 84003",
+      "phone": "(801) 756-0319",
+      "website": "https://www.wasatchsolar.com",
+      "image": "wasatch-solar-solutions.webp",
       "membership": 2,
-      "description": "Residential and commercial solar panel installation across eastern Idaho.",
-      "email": "sales@snakereversolar.com"
+      "description": "Residential and commercial solar panel installation across Utah County.",
+      "email": "sales@wasatchsolar.com"
     },
     {
       "id": 4,
-      "name": "Teton Brew & Coffee Co.",
-      "address": "55 E 1st N, Rexburg, ID 83440",
-      "phone": "(208) 555-0093",
-      "website": "https://www.tetonbrewcoffee.com",
-      "image": "teton-brew-coffee.webp",
+      "name": "American Fork Auto & Tire Center",
+      "address": "47 E Main St, American Fork, UT 84003",
+      "phone": "(801) 756-0093",
+      "website": "https://www.afautotire.com",
+      "image": "af-auto-tire.webp",
       "membership": 2,
-      "description": "Craft coffee roastery and café serving locally sourced pastries and sandwiches.",
-      "email": "hello@tetonbrewcoffee.com"
+      "description": "Full-service auto repair, oil changes, and tire sales for all makes and models.",
+      "email": "service@afautotire.com"
     },
     {
       "id": 5,
-      "name": "Rexburg Family Dental",
-      "address": "210 S 2nd W Ste 4, Rexburg, ID 83440",
-      "phone": "(208) 555-0461",
-      "website": "https://www.rexburgfamilydental.com",
-      "image": "rexburg-family-dental.webp",
+      "name": "American Fork Family Dental",
+      "address": "125 S 100 E Ste 3, American Fork, UT 84003",
+      "phone": "(801) 756-0461",
+      "website": "https://www.affamilydental.com",
+      "image": "af-family-dental.webp",
       "membership": 2,
       "description": "Full-service dental care for all ages, accepting most major insurance plans.",
-      "email": "appointments@rexburgfamilydental.com"
+      "email": "appointments@affamilydental.com"
     },
     {
       "id": 6,
-      "name": "Clearwater Tech Solutions",
-      "address": "401 University Blvd, Rexburg, ID 83440",
-      "phone": "(208) 555-0578",
-      "website": "https://www.clearwatertechid.com",
-      "image": "clearwater-tech-solutions.webp",
-      "membership": 1,
-      "description": "IT support, managed services, and custom software development for small businesses.",
-      "email": "support@clearwatertechid.com"
+      "name": "Lone Peak Realty Group",
+      "address": "55 W 400 N, American Fork, UT 84003",
+      "phone": "(801) 756-0578",
+      "website": "https://www.lonepeakrealty.com",
+      "image": "lone-peak-realty.webp",
+      "membership": 3,
+      "description": "Full-service real estate brokerage specializing in Utah County residential and commercial properties.",
+      "email": "info@lonepeakrealty.com"
     },
     {
       "id": 7,
-      "name": "High Desert Landscaping",
-      "address": "19 Fir Ave, Rexburg, ID 83440",
-      "phone": "(208) 555-0634",
-      "website": "https://www.highdesertlandscaping.net",
-      "image": "high-desert-landscaping.webp",
+      "name": "Highland Landscaping & Irrigation",
+      "address": "620 E 200 N, Lehi, UT 84043",
+      "phone": "(801) 768-0634",
+      "website": "https://www.highlandlandscaping.net",
+      "image": "highland-landscaping.webp",
       "membership": 1,
-      "description": "Lawn care, irrigation installation, and drought-tolerant landscape design.",
-      "email": "quote@highdesertlandscaping.net"
+      "description": "Lawn care, irrigation installation, and drought-tolerant landscape design for Utah County homes.",
+      "email": "quote@highlandlandscaping.net"
     },
     {
       "id": 8,
-      "name": "Pioneer Title & Escrow",
-      "address": "75 W 4th S, Rexburg, ID 83440",
-      "phone": "(208) 555-0712",
-      "website": "https://www.pioneertitleidaho.com",
-      "image": "pioneer-title-escrow.webp",
-      "membership": 3,
-      "description": "Real estate title insurance and closing services serving Madison County.",
-      "email": "closings@pioneertitleidaho.com"
+      "name": "Pleasant Grove Title & Escrow",
+      "address": "112 N Main St, Pleasant Grove, UT 84062",
+      "phone": "(801) 785-0712",
+      "website": "https://www.pgescrow.com",
+      "image": "pg-title-escrow.webp",
+      "membership": 1,
+      "description": "Real estate title insurance and closing services serving all of Utah County.",
+      "email": "closings@pgescrow.com"
     }
   ]
 }

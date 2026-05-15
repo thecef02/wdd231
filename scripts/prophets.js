@@ -28,11 +28,7 @@ const displayProphets = (prophets) => {
         card.appendChild(birthDate);
         card.appendChild(birthPlace);
         card.appendChild(portrait);
-        
-        // Append the section(card) with the created elements
-        // card.appendChild(_______); //fill in the blank
         card.appendChild(portrait);
-
         cards.appendChild(card);
     }); // end of arrow function and forEach loop
 };

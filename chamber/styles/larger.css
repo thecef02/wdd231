@@ -2,8 +2,11 @@
 
 @media (min-width: 320px) {
     header {
-        flex-wrap: nowrap;
+        flex-wrap: wrap;
+        flex-direction: row;
         justify-content: space-between;
+        
+        /* border-bottom: solid 1px var(--terracotta); */
         /* height: 200px; */
     }
 
@@ -11,15 +14,14 @@
         display: none;
     }
 
-    nav {
+    header nav {
         display: block;
-            position: static;
-            width: 100%;
-            background: var(--background);
-            padding: 0 1rem;
-            margin-top: 1rem;
+        position: static;
+        width: 100%;
+        background: var(--background);
+        padding: 0 1rem;
+        margin-top: 1rem;
     }
-
     .nav-holder {
         display: flex;
         align-items: center;
@@ -29,18 +31,38 @@
         flex: 0 0 auto;
     }
 
-    header nav {
-        width: auto;
-    }
-
     header nav ul {
         gap: 1.5rem;
+        flex-direction: column;
+    }
+    header nav ul {
+        display: flex;
         flex-direction: row;
+        gap: 0rem 1.25rem;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+    header nav a {
+        font-size: 1.25rem;
+    }
+    .header-brand span {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: var(--color-text);
     }
 
-    header nav a {
-        font-size: 0.95rem;
+    .business-cards section h2 {
+        font-size: 0.5rem;
     }
+
+
+
+
+
+
+
+
 
     footer {
         display: flex;
@@ -50,9 +72,11 @@
         align-items: center;
         background: var(--background);
         padding: 1rem 0;
+    
+
     }
 
     footer div {
-        width: 33%;
+        width: 27%;
     }
 }

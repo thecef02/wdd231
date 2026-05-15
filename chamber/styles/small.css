@@ -15,29 +15,36 @@
 }
 .hamburger::before {
     content: "\2630";
-    font-size: 1.5rem;
+    font-size: 1.9rem;
 }
 .hamburger.show::before {
     content: "\00D7";
 }
 
-
+body{width: 98%;
+    margin: 0 auto;
+    font-family: Roboto, sans-serif;
+}
 /********************* Header **************************/
 header {
     margin-top: 1rem;
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: row;
     align-items: center;
-    gap: 0.75rem;
     padding: 0.6rem 1rem;
-    background-color: var(--background);
+    background-color: var(--background); 
+    border: solid 1px var(--terracotta);
 }
-
+header.open {
+    flex-direction: column;
+    align-items: flex-start;
+}
 .header-brand {
     display: flex;
     align-items: center;
     gap: 0.6rem;
     flex: 1;
+    margin-bottom: 1rem;
 }
 
 .header-brand img {
@@ -47,7 +54,7 @@ header {
 }
 
 .header-brand span {
-    font-size: 1.5rem;
+    font-size: 1rem;
     font-weight: 700;
     color: var(--color-text);
 }
@@ -59,6 +66,7 @@ header nav {
 }
 header nav.show {
     display: block;
+    width: 200px;
 }
 /* header nav ul {
     display: flex;
@@ -73,7 +81,7 @@ header nav ul  {
     flex-direction: column;
         gap: 0rem 1.25rem;
             margin: 0;
-            /* padding: 0; */
+            padding: 0;
             list-style: none;
 }
 
@@ -98,10 +106,15 @@ header nav li.current a {
 }
 
 header nav a:hover {
-    background: var(--terracotta);
-    color: var(--text);
+    background: var(--deep-slate-blue);
+    color: #fff;
 }
 
+.nav-holder{
+    display: flex;
+    align-items: center;
+    gap: 0rem;
+}
 /********************** Theme toggle ****************/
 #theme-toggle {
     background: none;
@@ -109,7 +122,7 @@ header nav a:hover {
     border-radius: 50%;
     width: 2rem;
     height: 2rem;
-    font-size: 1rem;
+    font-size: 1.7rem;
     cursor: pointer;
     color: var(--color-text);
     display: flex;
@@ -118,6 +131,67 @@ header nav a:hover {
     padding: 0;
     line-height: 1;
 }
+
+
+
+
+/******************** Main ********************/
+
+main{
+    margin: 0.5rem 0;
+    border: solid 1px var(--terracotta);
+    padding: 0.5rem;
+}
+main h1{margin: 0;}
+
+#grid-view, #list-view {
+    /* display: flex;
+    flex-direction: row; */
+    font-size: 2rem;
+    color: var(--terracotta);
+    border: solid, 1px var(--text);
+}
+
+#cards {
+    display: grid;
+    background-color: #0a9396;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1rem;
+}
+
+.business-cards section {
+    border: solid 1px var(--text);
+    border-radius: 10px;
+    box-shadow: 0 0 30px #929292;
+    margin: 0.5rem;
+    padding: 0.2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.1rem;
+    font-weight: 700;
+    max-width: 310px;
+}
+.business-cards section h2, .business-cards section a, .business-cards section p {
+    margin: 0;
+    text-align: center;
+}
+.business-cards section h2{
+    font-size: 0.9rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.business-cards section p{
+    font-size: 0.7rem;
+}
+.business-cards section a{
+    font-size: 0.7rem;
+    color: blue;    text-decoration: none;
+}
+
+
+
+
+
 
 
 
@@ -131,6 +205,7 @@ footer {
     /* align-items: center; */
     background: var(--background);
     padding: 1rem 0;
+    border: solid 1px var(--terracotta);
 }
 footer div{
     margin-top: 1rem;

@@ -2,17 +2,19 @@
 const navButton = document.querySelector("#nav-button");
 const nav = document.querySelector("nav");
 const navLinks = document.querySelectorAll("nav a");
+const header = document.querySelector("header");   
 
 navButton.addEventListener("click", () => {
     navButton.classList.toggle("show");
     nav.classList.toggle("show");
+    header.classList.toggle("open");
 });
 
 navLinks.forEach((link) => {
     link.addEventListener("click", () => {
         navButton.classList.remove("show");
         nav.classList.remove("show");
-
+        header.classList.remove("open");
         navLinks.forEach((navLink) => {
             navLink.parentElement.classList.remove("current");
         });
