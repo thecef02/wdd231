@@ -17,11 +17,11 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=optional">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=optional"
         media="print" onload="this.media='all'">
     <noscript>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=optional">
     </noscript>
     <link rel="icon" href="images/favicon.ico">
     <link rel="stylesheet" href="styles/normalize.css">
@@ -56,8 +56,8 @@
 
     <main>
         <section class="hero-image">
-            <img src="images/hero-image.jpg" width="600px" height="250px"
-                alt="A group of people working together in an office setting, representing the collaborative spirit of the chamber of commerce.">
+            <!-- <img src="images/hero-image.jpg" width="600px" height="250px" -->
+                <!-- alt="A group of people working together in an office setting, representing the collaborative spirit of the chamber of commerce."> -->
             <div class="hero-button">
             </div>
         </section>
@@ -71,9 +71,13 @@
             </div>
         </section>
         <section class="business-holder">
+            <h2 class="hidden" >Business Directory</h2>
+            <div class="view-toggle">
             <button id="grid-view" aria-label="Grid view">&#x25A6;</button>
             <button id="list-view" aria-label="List view">&#x25A4;</button>
-            <div id="#cards" class="business-cards">
+            </div>
+            
+            <div id="cards" class="business-cards">
             </div>
         </section>
     </main>
@@ -90,16 +94,16 @@
         </div>
         <div class="social-links">
             <a href="https://github.com/thecef02" target="_blank" rel="github">
-                <img src="images/github.svg" alt="Link to GitHub web page">
+                <img src="images/github.svg" alt="Link to GitHub web page" width="30" height="30">
             </a>
             <a href="https://www.linkedin.com/in/cristian-e-fernandez" target="_blank" rel="linkedin">
-                <img src="images/linkedin.svg" alt="Link to LinkedIn page">
+                <img src="images/linkedin.svg" alt="Link to LinkedIn page" width="30" height="30">
             </a>
             <a href="https://www.facebook.com/your-facebook-username" target="_blank" rel="facebook">
-                <img src="images/facebook.svg" alt="Link to Facebook page">
+                <img src="images/facebook.svg" alt="Link to Facebook page" width="30" height="30">
             </a>
             <a href="https://www.instagram.com/your-instagram-username" target="_blank" rel="instagram">
-                <img src="images/instagram.svg" alt="Link to Instagram page">
+                <img src="images/instagram.svg" alt="Link to Instagram page" width="30" height="30">
             </a>
             <!-- <a href="https://twitter.com/your-twitter-username" target="_blank" rel="twitter">
                 <img src="images/twitter-x.svg" alt="Link to Twitter page">

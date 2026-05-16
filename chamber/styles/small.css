@@ -7,6 +7,9 @@
     --background: #fefae0;
     --text: #001219;
 }
+.hidden {
+    display: none;
+}
 .hamburger {
     background: none;
     border: none;
@@ -24,6 +27,7 @@
 body{width: 98%;
     margin: 0 auto;
     font-family: Roboto, sans-serif;
+    
 }
 /********************* Header **************************/
 header {
@@ -140,7 +144,7 @@ header nav a:hover {
 main{
     margin: 0.5rem 0;
     border: solid 1px var(--terracotta);
-    padding: 0.5rem;
+
 }
 main h1{margin: 0;}
 
@@ -148,29 +152,37 @@ main h1{margin: 0;}
     /* display: flex;
     flex-direction: row; */
     font-size: 2rem;
-    color: var(--terracotta);
+    color: var(--text);
     border: solid, 1px var(--text);
+}
+
+.view-toggle {
+    display: flex;
+    justify-content:space-around;
+    margin: auto;
+    width: 100px;
+    margin-bottom: 1rem;
 }
 
 #cards {
     display: grid;
-    background-color: #0a9396;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    /* grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); */
     gap: 1rem;
+    min-height: 600px;
 }
 
 .business-cards section {
+    /* margin: auto; */
     border: solid 1px var(--text);
     border-radius: 10px;
     box-shadow: 0 0 30px #929292;
-    margin: 0.5rem;
     padding: 0.2rem;
     display: flex;
-    flex-direction: column;
+    flex-direction: column;    
     align-items: center;
     gap: 0.1rem;
     font-weight: 700;
-    max-width: 310px;
+    /* min-width: 310px; */
 }
 .business-cards section h2, .business-cards section a, .business-cards section p {
     margin: 0;
@@ -187,6 +199,41 @@ main h1{margin: 0;}
     font-size: 0.7rem;
     color: blue;    text-decoration: none;
 }
+
+.website-link, .header-website {
+    display: none;
+}
+
+thead {
+    background-color: var(--terracotta);
+    color: var(--text);
+    
+}
+thead tr th {
+    padding: 0.5rem;
+    border: solid 1px var(--text);
+}
+
+
+tbody{
+    font-size: 0.7rem;
+}
+tbody tr:hover{
+    background-color: var(--secondary);
+}
+tbody tr td {
+    padding: 0.2rem;
+    border: solid 1px var(--text);
+}
+.zebra-even {
+    background-color: #e4e4e4;
+}
+
+.zebra-odd {
+    background-color: #ffffff;
+}
+
+
 
 
 
@@ -226,11 +273,12 @@ footer .social-links a {
 
 footer .social-links img {
     display: block;
-    width: 48px;
-    height: auto;
+    width: 30px;
+    height: 30px;
 }
 
 footer p, .chamber-info h3, .last-updated p {
     margin: 0.25rem 0;
     padding-left: 1rem;
+    font-size: 0.7rem;
 }
