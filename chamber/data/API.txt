@@ -1,0 +1,7 @@
+Defailt = a1cdf4d637caf46a9288686067728afa
+          
+WWDOpenWeather = eacc57fde3fd73e10a8af260d0044338
+
+https://api.openweathermap.org/data/2.5/weather?q=Utah,US&appid=a1cdf4d637caf46a9288686067728afa&units=imperial
+https://api.openweathermap.org/data/2.5/weather?lat=40.22&lon=111.47&appid=a1cdf4d637caf46a9288686067728afa
+49.77, 6.66
