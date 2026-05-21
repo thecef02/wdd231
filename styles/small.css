@@ -168,7 +168,7 @@ nav li.current a {
     height: 2.5rem;
     padding: 0.5rem;
     text-align: center;
-    color: var(--secondary);
+    color: #fff;
     margin-bottom: 1rem;
     background-color: #001219;
     border-radius: 5px;
@@ -249,7 +249,7 @@ nav li.current a {
 
 .course-card h3 {
     background-color: var(--text);
-    color: var(--secondary);
+    color: #fff;
     margin: 1rem 0.5rem ;
     padding: 0.75rem 1rem;
     font-size: 1rem;
