@@ -96,9 +96,12 @@ async function getBusinessData(viewType = "grid") {
     const viewToggle = document.querySelector(".view-toggle");
     if (window.location.pathname.split('/').pop() === "index.html") {
         viewToggle.style.display = "none";
-        const spotlightBusinesses = data.members.filter(
-            (member) => member.membership === 3 
-        );
+        const spotlightBusinesses = data.members
+            .filter(
+                (member) => member.membership === 3 || member.membership === 2)
+            .sort(() => Math.random() - 0.5)
+            .slice(0, 3);;
+
         displayBusinessesGrid(spotlightBusinesses);
     } else if (viewType === "list") {
         displayBusinessesList(data.members);

@@ -85,7 +85,8 @@ nav.show {
 nav ul {
     list-style: none;
     display: flex;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
+    flex-direction: column;
     gap: 0rem 1.25rem;
     padding: 0;
     margin: 0;

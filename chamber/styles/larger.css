@@ -19,7 +19,6 @@
         position: static;
         width: 100%;
         background: var(--background);
-        margin-top: 1rem;
     }
 
     .nav-holder {
@@ -46,7 +45,7 @@
     }
 
     .header-brand span {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
         font-weight: 700;
         color: var(--color-text);
     }
@@ -143,7 +142,7 @@
         width: 120px;
     }
     .header-brand span {
-        font-size: 1.1rem;
+        font-size: 1.25rem;
     }
         header nav a {
             font-size: 1.1rem;
