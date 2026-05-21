@@ -239,18 +239,16 @@ main h1 {
 
 .business-cards section h2 {
     font-size: 0.5rem;
+        font-size: 0.9rem;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+                margin: 0;
+                    text-align: center;
 }
 
-.business-cards section h2,
 .business-cards section a,
 .business-cards section p {
     margin: 0;
     text-align: center;
-}
-
-.business-cards section h2 {
-    font-size: 0.9rem;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .business-cards section p {
