@@ -24,10 +24,10 @@
     content: "\00D7";
 }
 
-body{width: 98%;
+body{max-width: 1102px;
     margin: 0 auto;
     font-family: Roboto, sans-serif;
-    
+    min-width: 260px;
 }
 /********************* Header **************************/
 header {
@@ -148,9 +148,42 @@ main{
 }
 main h1{margin: 0;}
 
+.hero-image img {
+    margin-left: -0.5rem;
+    margin-top: -0.5rem;
+    position: relative;
+}
+.hero-text {
+    position: absolute;
+    top: 7rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    color: #fff;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    /* max-width: 1100px; */
+    font-size: small;
+}
+#join-us-button{
+    position: absolute;
+    top: 24rem;
+    right: 4rem;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    color: var(--text);
+    font-weight: 700;
+    background-color: var(--terracotta);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 120px;
+    border: solid 2px var(--text);
+}
+
 #grid-view, #list-view {
-    /* display: flex;
-    flex-direction: row; */
     font-size: 2rem;
     color: var(--text);
     border: solid, 1px var(--text);
@@ -166,13 +199,13 @@ main h1{margin: 0;}
 
 #cards {
     display: grid;
+    margin-top: 2rem;
     /* grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); */
     gap: 1rem;
-    min-height: 600px;
+    /* min-height: 600px; */
 }
 
 .business-cards section {
-    /* margin: auto; */
     border: solid 1px var(--text);
     border-radius: 10px;
     box-shadow: 0 0 30px #929292;
@@ -183,6 +216,9 @@ main h1{margin: 0;}
     gap: 0.1rem;
     font-weight: 700;
     /* min-width: 310px; */
+}
+.business-cards section h2 {
+    font-size: 0.5rem;
 }
 .business-cards section h2, .business-cards section a, .business-cards section p {
     margin: 0;
@@ -218,13 +254,16 @@ thead tr th {
 tbody{
     font-size: 0.7rem;
 }
-tbody tr:hover{
-    background-color: var(--secondary);
+
+tbody tr:hover {
+    background-color: var(--background);
 }
+
 tbody tr td {
     padding: 0.2rem;
     border: solid 1px var(--text);
 }
+
 .zebra-even {
     background-color: #e4e4e4;
 }
@@ -232,6 +271,130 @@ tbody tr td {
 .zebra-odd {
     background-color: #ffffff;
 }
+
+
+
+
+
+
+
+
+
+/* Middle content  */
+.middle-content {
+    display: flex;
+    gap: 0.5rem;
+    padding: 1rem 0;
+    flex-wrap: wrap;
+}
+
+.content-holder1 {
+    flex: 2;
+}
+
+.content-holder2 {
+    display: flex;
+    flex: 2;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+
+/* Weather and events */
+
+.current-cards-holder {
+    display: flex;
+    padding: 0.5rem;
+    flex-wrap: wrap;
+    justify-content:space-around;
+}
+.current-cards-holder p, .current-cards-holder figcaption {
+    margin: 0.25rem 0;
+    font-size: 0.7rem;
+}
+.current-cards-holder p::first-letter, .current-cards-holder figcaption::first-letter {
+    /* font-size: 0.9rem; */
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.current-card-right first-child {
+    /* font-size: 1.2rem; */
+    font-weight: 600;
+    text-transform: uppercase;
+}
+#current-temp {
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+
+
+.events, .weather, .forecast {
+    background-color: #e0e0e0;
+    border-radius: 4px;
+    overflow: hidden;
+    min-height: 150px;
+    flex: 1;
+    min-width: 200px;
+}
+
+
+/* forecast cards */
+.forecast-cards-holder {
+    display: flex;
+    gap: 0.5rem;
+    padding: 0.5rem;
+    flex-wrap: wrap;
+}
+.forecast-cards {
+    background: linear-gradient(to bottom right, #b8e4f9 20%, #ffe066 80%, #ffd700);
+    border: solid 1px var(--text);
+    border-bottom: solid 2px var(--text);
+    border-right: solid 2px var(--text);
+    border-radius: 4px;
+    padding: 0.5rem;
+    flex: 1;
+    max-height: 120px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+.forecast-cards::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(to left, transparent, rgba(255,255,255,0.7), transparent);
+    animation: none;
+}
+.forecast-cards:hover::after {
+    animation: shimmer 0.7s ease-in-out 1;
+}
+@keyframes shimmer {
+    0%   { left: -100%; }
+    100% { left: 150%; }
+}
+.forecast-cards p {
+    /* color: var(--terracotta); */
+    margin: 0.25rem 0;
+}
+.events h2, .weather h2, .forecast h2 {
+    background-color: var(--deep-slate-blue);
+    color: white;
+    margin: 0;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+
+
+
+
+
+
 
 
 
@@ -281,4 +444,17 @@ footer p, .chamber-info h3, .last-updated p {
     margin: 0.25rem 0;
     padding-left: 1rem;
     font-size: 0.7rem;
+}
+
+
+.text {
+    cursor: text;
+    }
+    
+.text:hover {
+    transition: 0.5s;
+    box-shadow: 6px 6px 0 black;
+    transform: skewY(-5deg);
+    /* transform: scale(1.05); */
+    /* letter-spacing: 2px; */
 }

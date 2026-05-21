@@ -17,7 +17,7 @@
         position: static;
         width: 100%;
         background: var(--background);
-        padding: 0 1rem;
+        padding: 0.5rem;
         margin-top: 1rem;
     }
 

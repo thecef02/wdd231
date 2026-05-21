@@ -5,7 +5,7 @@
         flex-wrap: wrap;
         flex-direction: row;
         justify-content: space-between;
-        
+
         /* border-bottom: solid 1px var(--terracotta); */
         /* height: 200px; */
     }
@@ -22,6 +22,7 @@
         padding: 0 1rem;
         margin-top: 1rem;
     }
+
     .nav-holder {
         display: flex;
         align-items: center;
@@ -35,6 +36,7 @@
         gap: 1.5rem;
         flex-direction: column;
     }
+
     header nav ul {
         display: flex;
         flex-direction: row;
@@ -43,14 +45,49 @@
         padding: 0;
         list-style: none;
     }
+
     header nav a {
         font-size: 1.25rem;
     }
+
     .header-brand span {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
         font-weight: 700;
         color: var(--color-text);
     }
+
+
+    .hero-text {
+        position: absolute;
+        top: 10rem;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80%;
+        color: #fff;
+        text-align: center;
+        background-color: rgba(0, 0, 0, 0.3);
+        border-radius: 5px;
+        max-width: 1100px;
+    }
+
+    .hero-text {
+        font-size: 1rem;
+    }
+
+    #join-us-button {
+        top: 20rem;
+    }
+
+
+
+
+
+
+
+
+
+
+
     #cards {
         grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     }
@@ -58,9 +95,7 @@
     .business-holder {
         margin-bottom: 2rem;
     }
-    .business-cards section h2 {
-        font-size: 0.5rem;
-    }
+
 
     .business-cards section {
         margin: auto;
@@ -70,12 +105,15 @@
     main {
         padding: 0.5rem;
     }
+
     #cards table {
         margin: 2rem;
     }
+
     tbody {
         font-size: 0.9rem;
     }
+
     .website-link,
     .header-website {
         display: table-cell;
@@ -91,13 +129,48 @@
         align-items: center;
         background: var(--background);
         padding: 1rem 0;
-    
+
 
     }
 
     footer div {
         width: 27%;
     }
+
+    footer p,
+    .chamber-info h3,
+    .last-updated p {
+        font-size: 0.8rem;
+    }
+}
+
+@media (min-width: 620px) {
+    .header-brand span {
+        font-size: 1.4rem;
+    }
+
+    .hero-text {
+        top: 15rem;
+        font-size: 1.25rem;
+    }
+
+    footer p,
+    .chamber-info h3,
+    .last-updated p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (min-width: 1120px) {
+    .header-brand span {
+        font-size: 1.5rem;
+    }
+
+    .hero-text {
+        top: 15rem;
+        font-size: 1.25rem;
+    }
+
     footer p,
     .chamber-info h3,
     .last-updated p {

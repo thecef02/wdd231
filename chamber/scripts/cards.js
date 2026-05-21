@@ -79,6 +79,7 @@ const displayBusinessesGrid = (businesses) => {
         website.setAttribute("target", "_blank");
 
         // Add/append the section(card) with the elements
+        card.setAttribute("class", "text");
         card.appendChild(logo);
         card.appendChild(name);
         card.appendChild(address);
@@ -89,11 +90,17 @@ const displayBusinessesGrid = (businesses) => {
 };
 
 
-async function getBusinessData(viewType = "list") {
+async function getBusinessData(viewType = "grid") {
     const response = await fetch("data/members.json");
     const data = await response.json();
-
-    if (viewType === "list") {
+    const viewToggle = document.querySelector(".view-toggle");
+    if (window.location.pathname.split('/').pop() === "index.html") {
+        viewToggle.style.display = "none";
+        const spotlightBusinesses = data.members.filter(
+            (member) => member.membership === 3 
+        );
+        displayBusinessesGrid(spotlightBusinesses);
+    } else if (viewType === "list") {
         displayBusinessesList(data.members);
     } else {
         displayBusinessesGrid(data.members);

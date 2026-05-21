@@ -1,4 +1,6 @@
-
+:root {
+    --terracotta: #e07a5f;
+}
 body {
     margin: auto;
     max-width: 1500px;
@@ -19,7 +21,20 @@ h2 {
 h1 {
     text-align: center;
 }
-
+header a {
+    position: absolute;
+    top: 1rem;
+    text-decoration: none;
+    color: #333;
+    font-size: 1.2rem;
+    font-weight: 700;
+    background-color: var(--terracotta);
+    padding: 0.25rem 0.5rem;
+    height: 2rem;
+    align-content: center;
+    width: 4rem;
+    text-align: center;
+}
 section {
     display: flex; 
     margin: 0.25rem;

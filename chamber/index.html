@@ -9,10 +9,10 @@
         content="WDD 231 - Web Frontend Development I. Apply the concepts to a page that is responsive in both small and larger views." />
     <meta name="author" content="Cristian Fernandez" />
 
-    <meta property="og:title" content="Chamber of Commerce Directory">
+    <meta property="og:title" content="American Fork Chamber of Commerce Home page">
     <meta property="og:description"
         content="The American Fork chamber of commerce is a local organization of businesses that work together to strengthen the business interests of the group." />
-    <meta property="og:url" content="https://thecef02.github.io/wdd231/chamber/directory.html">
+    <meta property="og:url" content="https://thecef02.github.io/wdd231/chamber/index.html">
     <meta property="og:image" content="https://thecef02.github.io/wdd231/chamber/images/logo.svg">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -41,8 +41,8 @@
             <nav>
                 <ul>
                     <li><a href="../index.html">Main</a></li>
-                    <li ><a href="index.html">Home</a></li>
-                    <li class="current"><a href="directory.html">Directory</a></li>
+                    <li class="current"><a href="index.html">Home</a></li>
+                    <li><a href="directory.html">Directory</a></li>
                     <li><a href="join.html">Join</a></li>
                     <li><a href="discover.html">Discover</a></li>
                 </ul>
@@ -57,24 +57,43 @@
 
     <main>
         <section class="hero-image">
-            <!-- <img src="images/hero-image.jpg" width="600px" height="250px" -->
-                <!-- alt="A group of people working together in an office setting, representing the collaborative spirit of the chamber of commerce."> -->
-            <div class="hero-button">
+            <img src="images/hero.webp" width="1100px" height="460px"
+                alt="View of American Fork city with the mountains in the background">
+            <div class="hero-text">
+                <h1>American Fork Chamber of Commerce, Where families and businesses thrive together.</h1>
+                <button id="join-us-button" class="join-us" aria-label="Join us button">Join us!</button>
             </div>
+            <h1>Home</h1>
         </section>
         <section class="middle-content">
-            <h1>Directory</h1>
-            <div class="content-holder">
-               
+            <div class="content-holder1">
+                <div class="events">
+                    <h2>Events</h2>
+                </div>
+            </div>
+            <div class="content-holder2">
+                <div class="weather">
+                    <h2>Current Weather</h2>
+                    <div class="current-cards-holder">
+                    
+                    </div>
+                </div>
+                <div class="forecast">
+                    <h2>Weather Forecast</h2>
+                    <div class="forecast-cards-holder">
+
+                    </div>
+                </div>
             </div>
         </section>
         <section class="business-holder">
-            <h2 class="hidden" >Business Directory</h2>
+            <h2 class="hidden">Business Directory</h2>
             <div class="view-toggle">
-            <button id="grid-view" aria-label="Grid view">&#x25A6;</button>
-            <button id="list-view" aria-label="List view">&#x25A4;</button>
+
+                <button id="grid-view" aria-label="Grid view">&#x25A6;</button>
+                <button id="list-view" aria-label="List view">&#x25A4;</button>
             </div>
-            
+
             <div id="cards" class="business-cards">
             </div>
         </section>
