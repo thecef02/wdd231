@@ -6,7 +6,7 @@
 
 
 const forecastUrl =
-    "https://api.openweathermap.org/data/2.5/forecast?lat=40.376&lon=-111.795&appid=a1cdf4d637caf46a9288686067728afa";
+    "https://api.openweathermap.org/data/2.5/forecast?lat=40.376&lon=-111.795&units=imperial&appid=a1cdf4d637caf46a9288686067728afa";
 
 const currentUrl =
     "https://api.openweathermap.org/data/2.5/weather?lat=40.376&lon=-111.795&units=imperial&appid=a1cdf4d637caf46a9288686067728afa";
