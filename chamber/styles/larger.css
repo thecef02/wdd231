@@ -1,25 +1,11 @@
 /* ── Large screen overrides (≥ 640px) ── */
 
 @media (min-width: 320px) {
-    header {
-        flex-wrap: wrap;
-        flex-direction: row;
-        justify-content: space-between;
 
-        /* border-bottom: solid 1px var(--terracotta); */
-        /* height: 200px; */
-    }
 
-    .hamburger {
-        display: none;
-    }
 
-    header nav {
-        display: block;
-        position: static;
-        width: 100%;
-        background: var(--background);
-    }
+
+
 
     .nav-holder {
         display: flex;
@@ -30,15 +16,7 @@
         flex: 0 0 auto;
     } */
 
-    header nav ul {
-        flex-direction: column;
-        display: flex;
-        flex-direction: row;
-        gap: 0rem 0rem;
-        margin: 0;
-        padding: 0;
-        list-style: none;
-    }
+
 
     header nav a {
         font-size: 1rem;
@@ -136,6 +114,7 @@
 }
 
 @media (min-width: 620px) {
+
     #join-us-button {
         padding: 0.5rem 1rem;
         font-size: 1.2rem;
@@ -163,8 +142,40 @@
     }
 }
 
-@media (min-width: 900px) {
+@media (min-width: 800px) {
+    header {
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: space-between;
+    
+            /* border-bottom: solid 1px var(--terracotta); */
+            /* height: 200px; */
+        }
+    header nav {
+                display: block;
+                position: static;
+                width: 100%;
+                background: var(--background);
+            }
 
+        header nav ul {
+            flex-direction: column;
+            display: flex;
+            flex-direction: row;
+            gap: 0rem 0rem;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+
+
+
+
+
+    .hamburger {
+        display: none;
+    }
     header nav ul {
         gap: 0rem 1rem;
     }
