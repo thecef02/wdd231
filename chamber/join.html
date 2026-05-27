@@ -9,7 +9,7 @@
         content="WDD 231 - Web Frontend Development I. Apply the concepts to a page that is responsive in both small and larger views." />
     <meta name="author" content="Cristian Fernandez" />
 
-    <meta property="og:title" content="American Fork Chamber of Commerce Home page">
+    <meta property="og:title" content="American Fork Chamber of Commerce Join page">
     <meta property="og:description"
         content="The American Fork chamber of commerce is a local organization of businesses that work together to strengthen the business interests of the group." />
     <meta property="og:url" content="https://thecef02.github.io/wdd231/chamber/index.html">
@@ -27,7 +27,10 @@
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/larger.css">
+    <link rel="stylesheet" href="styles/join-small.css">
+    <link rel="stylesheet" href="styles/join-large.css">
     <script src="scripts/core.js" defer></script>
+    <script src="scripts/join.js" defer></script>
 </head>
 
 <body>
@@ -49,10 +52,136 @@
         <button id="nav-button" class="hamburger" aria-label="navigation"></button>
     </div></header>
 
+    <main>
+        <div class="join-container">
 
+            <section class="join-form-section">
+                <h1>Membership Application Form</h1>
+                <form method="get" action="thankyou.html" id="join-form">
 
+                    <label for="first-name">First Name
+                        <input type="text" id="first-name" name="first-name" placeholder="First Name" required autocomplete="given-name">
+                    </label>
 
-    <main></main>
+                    <label for="last-name">Last Name
+                        <input type="text" id="last-name" name="last-name" placeholder="Last Name" required autocomplete="family-name">
+                    </label>
+
+                    <label for="org-title">Title
+                        <input type="text" id="org-title" name="org-title" placeholder="e.g. CEO, Manager" required>
+                    </label>
+
+                    <label for="email">Email
+                        <input type="email" id="email" name="email" placeholder="john89@gmail.com" required autocomplete="email">
+                    </label>
+
+                    <label for="phone">Cell Phone
+                        <input type="tel" id="phone" name="phone" placeholder="987-555-1234" pattern="[\d\s\-\(\)]+" required autocomplete="tel">
+                    </label>
+
+                    <label for="business-name">Organization
+                        <input type="text" id="business-name" name="business-name" placeholder="Business name" required>
+                    </label>
+
+                    <label for="description">Business Description
+                        <textarea id="description" name="description" rows="4" placeholder="Brief description of your business..."></textarea>
+                    </label>
+
+                    <fieldset>
+                        <legend>Membership Level</legend>
+                        <label><input type="radio" name="membership" value="np" required> NP Membership (Non-Profit)</label>
+                        <label><input type="radio" name="membership" value="bronze"> Bronze Membership</label>
+                        <label><input type="radio" name="membership" value="silver"> Silver Membership</label>
+                        <label><input type="radio" name="membership" value="gold"> Gold Membership</label>
+                    </fieldset>
+
+                    <input type="hidden" id="timestamp" name="timestamp">
+
+                    <button type="submit">Apply for Membership</button>
+                </form>
+            </section>
+
+            <section class="membership-levels-section" aria-label="Membership Levels">
+                <h2>Membership Levels</h2>
+
+                <div class="membership-card">
+                    <h3>Non Profit Membership Level</h3>
+                    <button class="learn-more-btn" data-modal="modal-np" aria-haspopup="dialog">Learn More</button>
+                </div>
+
+                <div class="membership-card">
+                    <h3>Bronze Membership Level</h3>
+                    <button class="learn-more-btn" data-modal="modal-bronze" aria-haspopup="dialog">Learn More</button>
+                </div>
+
+                <div class="membership-card">
+                    <h3>Silver Membership Level</h3>
+                    <button class="learn-more-btn" data-modal="modal-silver" aria-haspopup="dialog">Learn More</button>
+                </div>
+
+                <div class="membership-card">
+                    <h3>Gold Membership Level</h3>
+                    <button class="learn-more-btn" data-modal="modal-gold" aria-haspopup="dialog">Learn More</button>
+                </div>
+            </section>
+        </div>
+
+        <!-- Modals -->
+        <dialog id="modal-np" aria-labelledby="modal-np-title">
+            <h2 id="modal-np-title">Non Profit Membership</h2>
+            <p><strong>Cost:</strong> Free</p>
+            <ul>
+                <li>Basic business directory listing</li>
+                <li>Access to community networking events</li>
+                <li>Monthly chamber newsletter</li>
+                <li>Certificate of membership</li>
+            </ul>
+            <button class="modal-close" aria-label="Close">Close</button>
+        </dialog>
+
+        <dialog id="modal-bronze" aria-labelledby="modal-bronze-title">
+            <h2 id="modal-bronze-title">Bronze Membership</h2>
+            <p><strong>Cost:</strong> $50 / year</p>
+            <ul>
+                <li>Everything in NP level</li>
+                <li>Enhanced directory listing with logo</li>
+                <li>1 chamber event discount per year</li>
+                <li>Mention in the monthly newsletter</li>
+                <li>Ribbon cutting ceremony for new businesses</li>
+            </ul>
+            <button class="modal-close" aria-label="Close">Close</button>
+        </dialog>
+
+        <dialog id="modal-silver" aria-labelledby="modal-silver-title">
+            <h2 id="modal-silver-title">Silver Membership</h2>
+            <p><strong>Cost:</strong> $150 / year</p>
+            <ul>
+                <li>Everything in Bronze level</li>
+                <li>3 chamber event discounts per year</li>
+                <li>Access to exclusive business training sessions</li>
+                <li>Advertising banner on the chamber website</li>
+                <li>Social media feature (1 per quarter)</li>
+                <li>Priority in chamber referral network</li>
+            </ul>
+            <button class="modal-close" aria-label="Close">Close</button>
+        </dialog>
+
+        <dialog id="modal-gold" aria-labelledby="modal-gold-title">
+            <h2 id="modal-gold-title">Gold Membership</h2>
+            <p><strong>Cost:</strong> $300 / year</p>
+            <ul>
+                <li>Everything in Silver level</li>
+                <li>Spotlight position on the home page</li>
+                <li>Unlimited chamber event discounts</li>
+                <li>Premium advertising placement on website</li>
+                <li>Monthly social media feature</li>
+                <li>All training sessions free of charge</li>
+                <li>Dedicated chamber account manager</li>
+                <li>VIP seating at annual chamber banquet</li>
+            </ul>
+            <button class="modal-close" aria-label="Close">Close</button>
+        </dialog>
+    </main>
 
 
 

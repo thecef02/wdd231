@@ -1,0 +1,16 @@
+/* Join page - larger screen overrides */
+
+@media (min-width: 640px) {
+    .join-container {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .join-form-section {
+        flex: 1;
+    }
+
+    .membership-levels-section {
+        flex: 0 0 260px;
+    }
+}
