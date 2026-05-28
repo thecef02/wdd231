@@ -1,10 +1,16 @@
+
 .join-container {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
     padding: 1rem;
 }
-
+.join-form-section{
+    background-color: #ecebeb;
+    border-radius: 8px;
+    padding: 1rem;
+    border: solid 1px var(--terracotta);
+}
 .join-form-section h1 {
     font-size: 1.2rem;
     margin-bottom: 1rem;
@@ -28,7 +34,7 @@
     border-left-width: 6px;
 }
 #join-form input:required:valid {
-    border-color: green;
+    border-color: #066306;
     border-left-width: 6px;
 }
 
@@ -51,6 +57,7 @@
     border: 1px solid #ccc;
     border-radius: 4px;
     padding: 0.5rem 1rem;
+    background-color: #f9f9f9;
 }
 
 #join-form fieldset legend {

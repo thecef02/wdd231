@@ -59,32 +59,32 @@
                 <h1>Membership Application Form</h1>
                 <form method="get" action="thankyou.html" id="join-form">
 
-                    <label for="first-name" title="First Name">First Name
-                        <input type="text" id="first-name" name="first-name" placeholder="First Name" required autocomplete="given-name">
+                    <label for="first-name">First Name
+                        <input type="text" id="first-name" name="first-name" placeholder="First Name" title="Enter your first name" required autocomplete="given-name">
                     </label>
 
-                    <label for="last-name" title="Last Name">Last Name
-                        <input type="text" id="last-name" name="last-name" placeholder="Last Name" required autocomplete="family-name">
+                    <label for="last-name">Last Name
+                        <input type="text" id="last-name" name="last-name" placeholder="Last Name" title="Enter your last name" required autocomplete="family-name">
                     </label>
 
-                    <label for="org-title" title="Job Title">Title
-                        <input type="text" id="org-title" name="org-title" placeholder="e.g. CEO, Manager" required autocomplete="organization-title">
+                    <label for="org-title">Title
+                        <input type="text" id="org-title" name="org-title" placeholder="e.g. CEO, Manager" title="Enter your organizational title (letters and spaces only)" pattern="[A-Za-z\s]+" required autocomplete="organization-title">
                     </label>
 
-                    <label for="email" title="Email Address">Email
-                        <input type="email" id="email" name="email" placeholder="jondoe@gmail.com" required autocomplete="email">
+                    <label for="email">Email
+                        <input type="email" id="email" name="email" placeholder="jondoe@gmail.com" title="Enter a valid email address" required autocomplete="email">
                     </label>
 
-                    <label for="phone" title="Cell Phone">Phone
-                        <input type="tel" id="phone" name="phone" placeholder="987-555-1234" pattern="[\d\s\-\(\)]+" required autocomplete="tel">
+                    <label for="phone">Cell Phone
+                        <input type="tel" id="phone" name="phone" placeholder="987-555-1234" title="Enter your phone number e.g. 987-555-1234" pattern="[\d\s\-\(\)]+" required autocomplete="tel">
                     </label>
 
-                    <label for="business-name" title="Organization">Organization
-                        <input type="text" id="business-name" name="business-name" placeholder="Business name" required autocomplete="organization">
+                    <label for="business-name">Organization
+                        <input type="text" id="business-name" name="business-name" placeholder="Business name" title="Enter your business or organization name" required autocomplete="organization">
                     </label>
 
-                    <label for="description" title="Business Description">Business Description
-                        <textarea id="description" name="description" rows="4" placeholder="Brief description of your business..."></textarea>
+                    <label for="description" >Business Description
+                        <textarea id="description" name="description" rows="4" placeholder="Brief description of your business..." title="Enter a brief description of your business"></textarea>
                     </label>
 
                     <fieldset>
