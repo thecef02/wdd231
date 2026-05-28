@@ -82,14 +82,7 @@ header nav.show {
     width: 200px;
 }
 
-/* header nav ul {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0rem 1.25rem;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-} */
+
 header nav ul {
     display: block;
     flex-direction: column;
@@ -107,9 +100,6 @@ header nav a {
     font-size: 0.9rem;
 }
 
-/* nav li {
-    border-bottom: 1px solid var(--terracotta);
-} */
 
 nav li:last-child {
     border-bottom: none;
@@ -527,8 +517,10 @@ footer p,
     margin: 1rem 0;
 }
 .thank-you p strong {
-    color: var(--terracotta);
+    padding: 0.2rem 0.5rem;
+    color: var(--text);
     margin: 1rem 0;
+    background: var(--terracotta);
 }
 
 .thank-you ul {
