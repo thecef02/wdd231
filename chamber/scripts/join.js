@@ -1,7 +1,8 @@
 const form = document.getElementById('join-form');
-form.addEventListener('submit', () => {
-    document.getElementById('timestamp').value = new Date().toLocaleString();
-});
+// form.addEventListener('submit', () => {
+//     document.getElementById('timestamp').value = new Date().toLocaleString();
+// });
+document.getElementById("timestamp").value = new Date().toLocaleString();
 
 document.querySelectorAll('.learn-more-btn').forEach(btn => {
     btn.addEventListener('click', () => {

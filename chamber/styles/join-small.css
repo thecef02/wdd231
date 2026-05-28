@@ -14,6 +14,7 @@
 .join-form-section h1 {
     font-size: 1.2rem;
     margin-bottom: 1rem;
+    animation: popIn 1s ease-out forwards;
 }
 
 #join-form {
@@ -47,6 +48,7 @@
     font-family: inherit;
     width: 100%;
     box-sizing: border-box;
+    animation: slideFromLeft 1s ease-out forwards;
 }
 
 #join-form textarea {
@@ -90,14 +92,59 @@
     border: solid 1px var(--text);
     border-radius: 5px;
     cursor: pointer;
+    animation: slideUp 1s ease-out forwards;
 }
-
+   
 /* Membership cards */
 .membership-levels-section h2 {
     font-size: 1.1rem;
     margin-bottom: 0.75rem;
+    text-align: center;
 }
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(800px);
+    }
 
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes slideFromRight {
+    from {
+        opacity: 0;
+        transform: translateX(800px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    } 
+}
+@keyframes slideFromLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-60px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+@keyframes popIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
 .membership-card {
     display: flex;
     flex-direction: column;
@@ -108,7 +155,23 @@
     padding: 1rem;
     margin-bottom: 0.75rem;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    opacity: 0;
+    animation: slideFromRight 1.0s ease-out forwards;
 }
+.membership-card:nth-child(1) {
+    animation-delay: 0.1s;
+}
+.membership-card:nth-child(2) {
+    animation-delay: 0.25s;
+}
+.membership-card:nth-child(3) {
+    animation-delay: 0.4s;
+}
+.membership-card:nth-child(4) {
+    animation-delay: 0.55s;
+}
+
+
 
 .membership-card h3 {
     margin: 0;
@@ -163,8 +226,12 @@ dialog ul {
     font-size: 0.9rem;
     background-color: var(--terracotta);
     color: var(--text);
-    border: solid 2px var(--text);
+    border: solid 1px var(--text);
     border-radius: 5px;
     cursor: pointer;
     font-weight: 700;
+}
+
+footer{
+    animation: popIn 1s ease-out forwards;   
 }
