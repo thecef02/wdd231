@@ -67,12 +67,19 @@
 }
 
 #join-form fieldset label {
+
     font-weight: 400;
     flex-direction: row;
     align-items: center;
-    gap: 0.4rem;
+    padding: 0.3rem;
+    /* gap: 0.4rem; */
 }
+#join-form fieldset label input {
+    margin-right: 0rem;
+    max-width: 40px;
+    height: 14px;
 
+}
 #join-form button[type="submit"] {
     margin-top: 0.5rem;
     padding: 0.6rem 1rem;
@@ -80,7 +87,7 @@
     font-weight: 700;
     background-color: var(--terracotta);
     color: var(--text);
-    border: solid 2px var(--text);
+    border: solid 1px var(--text);
     border-radius: 5px;
     cursor: pointer;
 }
