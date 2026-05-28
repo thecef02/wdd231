@@ -461,6 +461,7 @@ footer {
     background: var(--background);
     padding: 1rem 0;
     border: solid 1px var(--terracotta);
+    animation: popIn 1s ease-out forwards;
 }
 
 footer div {
