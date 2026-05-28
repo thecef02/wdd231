@@ -1,5 +1,3 @@
-/* Join page - small screen styles */
-
 .join-container {
     display: flex;
     flex-direction: column;
@@ -24,6 +22,14 @@
     font-size: 0.85rem;
     font-weight: 600;
     gap: 0.2rem;
+}
+#join-form input:required{
+    border-color: var(--terracotta);
+    border-left-width: 6px;
+}
+#join-form input:required:valid {
+    border-color: green;
+    border-left-width: 6px;
 }
 
 #join-form input,
