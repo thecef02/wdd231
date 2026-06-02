@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site Plan – Utah's Mighty Five | WDD 231 – Cristian Fernandez</title>
+    <meta name="description"
+        content="Site plan for Utah's Mighty Five, a website dedicated to exploring Utah's national parks using the National Park Service API." />
+    <meta name="author" content="Cristian Fernandez" />
+
+    <meta property="og:title" content="Site Plan – Utah's Mighty Five | WDD 231">
+    <meta property="og:description"
+        content="Planning document for a website dedicated to Utah's national parks, showcasing the Mighty Five and beyond." />
+    <meta property="og:locale" content="en_US">
+    <meta property="og:url" content="https://thecef02.github.io/wdd231/project/siteplan.html">
+    <meta property="og:image" content="https://thecef02.github.io/wdd231/project/images/favicon2.ico">
+    <meta property="og:type" content="website">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+        media="print" onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    </noscript>
+    <link rel="icon" href="/wdd231/project/images/favicon2.ico">
+    <link rel="stylesheet" href="../normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <link rel="stylesheet" href="styles/siteplan.css">
+    <script src="scripts/core.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>Website Planning Document</h1>
+        <p><strong>Project Name:</strong> Utah's Mighty Five</p>
+        <div class="logo">UMF</div>
+    </header>
+
+    <main>
+        <section>
+            <h2>Site Name</h2>
+            <p><strong>Utah's Mighty Five</strong></p>
+            <p>
+                I chose this name because it references the iconic group of five national parks located entirely within
+                Utah — Zion, Bryce Canyon, Capitol Reef, Canyonlands, and Arches. The name is widely recognized among
+                outdoor enthusiasts and immediately communicates the geographic and cultural focus of the website.
+            </p>
+            <p><strong>Optional domain availability:</strong> utahmightyfive.org</p>
+        </section>
+
+        <section>
+            <h2>Site Purpose</h2>
+            <p>
+                The purpose of this website is to serve as an interactive guide to Utah's national parks. Users can
+                explore real park information fetched from the National Park Service API, browse available activities
+                and campgrounds, save their favorite parks using local storage, and submit fictitious park reservations
+                through an interactive form. The site aims to inspire and inform visitors who are planning — or simply
+                dreaming about — a trip to Utah's stunning landscapes.
+            </p>
+        </section>
+
+        <section>
+            <h2>Scenarios</h2>
+            <ul>
+                <li>Which national parks in Utah offer camping, and are there available sites I can reserve?</li>
+                <li>What activities and trails are available at Zion National Park?</li>
+                <li>Can I save my favorite parks to a personal list and come back to them later?</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Color Schema</h2>
+            <p>
+                These are the six main colors selected for the site. They reflect the rugged desert landscapes, rich
+                canyon rock, and wide skies of Utah's national parks — presented in a dark-mode palette.
+            </p>
+
+            <div class="color-boxes">
+                <div class="color-card">
+                    <div class="swatch0"></div>
+                    <div class="color-info">
+                        <p><strong>#80B57E</strong></p>
+                        <p>Primary — headings, header background, primary buttons and interactive elements.</p>
+                    </div>
+                </div>
+
+                <div class="color-card">
+                    <div class="swatch1"></div>
+                    <div class="color-info">
+                        <p><strong>#222222</strong></p>
+                        <p>Body background — dark base that evokes the night sky above Utah's dark-sky parks.</p>
+                    </div>
+                </div>
+
+                <div class="color-card">
+                    <div class="swatch2"></div>
+                    <div class="color-info">
+                        <p><strong>#E9EB87</strong></p>
+                        <p>Secondary — highlights, labels, wireframe titles, and supporting accents.</p>
+                    </div>
+                </div>
+
+                <div class="color-card">
+                    <div class="swatch3"></div>
+                    <div class="color-info">
+                        <p><strong>#D82C41</strong></p>
+                        <p>Accent — section dividers, alerts, call-to-action borders, and reservation badges.</p>
+                    </div>
+                </div>
+
+                <div class="color-card">
+                    <div class="swatch4"></div>
+                    <div class="color-info">
+                        <p><strong>#4B5B6E</strong></p>
+                        <p>Primary hover — button and link hover states, cards overlay, secondary navigation.</p>
+                    </div>
+                </div>
+
+                <div class="color-card">
+                    <div class="swatch5"></div>
+                    <div class="color-info">
+                        <p><strong>#D57A37</strong></p>
+                        <p>Secondary hover — warm orange tones for canyon rock, warning banners, hover effects.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Typography</h2>
+            <p>
+                <strong>Roboto</strong> will be used for all body text because it is clean, highly legible on dark
+                backgrounds, and widely supported across all devices.
+            </p>
+            <p>
+                <strong>Roboto Bold (700)</strong> will be used for page headings, section titles, and park names to
+                create visual hierarchy and emphasis.
+            </p>
+            <p>
+                Both weights will be loaded from Google Fonts with a performance-first approach (preload + print media
+                swap) to avoid render-blocking resources.
+            </p>
+        </section>
+
+        <section>
+            <h2>Wireframes</h2>
+            <p>
+                The following wireframes represent the general layout for the home page in both mobile and desktop
+                views. Park cards are powered by the National Park Service API.
+            </p>
+
+            <div class="wireframes">
+                <div class="wireframe mobile">
+                    <h3>Mobile View</h3>
+                    <img src="images/wireframe-movil.webp" alt="Wirefram for movil devices">
+                </div>
+            
+                <div class="wireframe desktop">
+                    <h3>Desktop View</h3>
+                    <img src="images/wireframe.webp" alt="Wirefram for Desktop Computers">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="last-updated">
+            <p>&copy; <span id="currentyear"></span></p>
+            <p id="lastModified"></p>
+        </div>
+    </footer>
+</body>
+
+</html>
