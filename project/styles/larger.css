@@ -1,0 +1,39 @@
+@media only screen and (min-width: 320px) {
+
+}
+
+@media (min-width: 768px) {
+    header {
+        flex-wrap: nowrap;
+        padding: 0.75rem 2rem;
+    }
+
+    nav {
+        display: block;
+        width: auto;
+        border-top: none;
+        background-color: transparent;
+        margin-right: 3rem;
+    }
+
+    nav ul {
+        flex-direction: row;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    nav ul li a {
+        padding: 0.5rem 1rem;
+        border-radius: 4px;
+        border-left: none;
+        border-bottom: 3px solid transparent;
+    }
+
+    nav ul li.current a {
+        border-bottom-color: var(--rised);
+    }
+
+    .hamburger {
+        display: none;
+    }
+}
