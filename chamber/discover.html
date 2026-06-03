@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -9,10 +9,10 @@
         content="WDD 231 - Web Frontend Development I. Apply the concepts to a page that is responsive in both small and larger views." />
     <meta name="author" content="Cristian Fernandez" />
 
-    <meta property="og:title" content="American Fork Chamber of Commerce Home page">
+    <meta property="og:title" content="American Fork Chamber of Commerce Discover page">
     <meta property="og:description"
         content="The American Fork chamber of commerce is a local organization of businesses that work together to strengthen the business interests of the group." />
-    <meta property="og:url" content="https://thecef02.github.io/wdd231/chamber/index.html">
+    <meta property="og:url" content="https://thecef02.github.io/wdd231/chamber/discover.html">
     <meta property="og:image" content="https://thecef02.github.io/wdd231/chamber/images/logo.svg">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,7 +27,9 @@
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/larger.css">
+    <link rel="stylesheet" href="styles/discover.css">
     <script src="scripts/core.js" defer></script>
+    <script src="scripts/discover.js" type="module"></script>
 </head>
 
 <body>
@@ -54,7 +56,12 @@
 
 
 
-    <main></main>
+    <main>
+        <section class="visit-banner">
+            <p id="visit-msg"></p>
+        </section>
+        <div id="discover-grid"></div>
+    </main>
 
 
 
