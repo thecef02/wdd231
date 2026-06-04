@@ -43,10 +43,7 @@
             "card6 card7"
             "card8 card8";
     }
-        .attraction-card figure img:hover {
-            transform: scale(1.08);
-            filter: brightness(1.12) saturate(1.2);
-        }
+
 }
 
 
@@ -61,7 +58,10 @@
     }
 }
 
-
+    .attraction-card figure img:hover {
+        transform: scale(1.08);
+        filter: brightness(1.12) saturate(1.2);
+    }
 .attraction-card {
     background-color: var(--background);
     border: 1px solid var(--terracotta);
@@ -129,7 +129,7 @@
 
 .attraction-card button {
     margin: 0.75rem 1rem;
-    padding: 0.5rem 1.25rem;
+    /* padding: 0.5rem 1.25rem; */
     align-self: flex-start;
     background-color: var(--terracotta);
     color: #000;
@@ -138,13 +138,78 @@
     font-weight: 700;
     font-size: 0.85rem;
     cursor: pointer;
-    transition: background-color 0.2s ease;
+    /* transition: background-color 0.2s ease; */
+    transition: all 0.3s ease;
+position: relative;
+    display: inline-block;
+    box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5),
+        7px 7px 20px 0px rgba(0, 0, 0, .1),
+        4px 4px 5px 0px rgba(0, 0, 0, .1);
+    outline: none;
 }
 
-.attraction-card button:hover {
+
+@keyframes increaseFontSize {
+    0% {
+        font-size: 0.9rem;
+    }
+
+    100% {
+        font-size: 1.1rem;
+    }
+}
+
+/* 5 */
+.btn-5 {
+    width: 130px;
+    height: 40px;
+    line-height: 42px;
+    padding: 0;
+    border: none;
+    /* background: rgb(255, 27, 240); */
+    background: linear-gradient(0deg, var(--terracotta) 0%, var(--accent) 100%);
+}
+
+.btn-5:hover {
+    color: #000;
+    background: transparent;
+    box-shadow: none;
+    animation: increaseFontSize 0.8s ease-in-out 1;
+}
+
+.btn-5:before,
+.btn-5:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 2px;
+    width: 0;
+    background: var(--terracotta);
+    box-shadow:
+        -1px -1px 5px 0px #fff,
+        7px 7px 20px 0px #0003,
+        4px 4px 5px 0px #0002;
+    transition: 400ms ease all;
+}
+
+.btn-5:after {
+    right: inherit;
+    top: inherit;
+    left: 0;
+    bottom: 0;
+}
+
+.btn-5:hover:before,
+.btn-5:hover:after {
+    width: 100%;
+    transition: 800ms ease all;
+}
+
+/* .attraction-card button:hover {
     background-color: var(--deep-slate-blue);
     color: #fff;
-}
+} */
 
 
 /* @media (min-width: 1025px) {

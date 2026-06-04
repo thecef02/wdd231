@@ -55,6 +55,7 @@ async function loadAttractions() {
 
         const btn = document.createElement('button');
         btn.type = 'button';
+        btn.className = 'btn-5';
         btn.textContent = 'Learn More';
 
         article.append(h2, figure, addr, p, btn);
