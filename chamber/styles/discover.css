@@ -1,4 +1,3 @@
-/* ── Visit banner ── */
 .visit-banner {
     background-color: var(--deep-slate-blue);
     color: #fff;
@@ -8,14 +7,10 @@
     font-weight: 700;
     letter-spacing: 0.03em;
 }
-
-/* ── Grid container ── */
 #discover-grid {
     display: grid;
     gap: 1rem;
     padding: 1rem;
-
-    /* ── SMALL (320–640px): single column ── */
     grid-template-columns: 1fr;
     grid-template-areas:
         "card1"
@@ -37,7 +32,7 @@
 .card-7 { grid-area: card7; }
 .card-8 { grid-area: card8; }
 
-/* ── MEDIUM (641–1024px): 2 cols, first + last span full width ── */
+
 @media (min-width: 641px) and (max-width: 1024px) {
     #discover-grid {
         grid-template-columns: 1fr 1fr;
@@ -48,9 +43,13 @@
             "card6 card7"
             "card8 card8";
     }
+        .attraction-card figure img:hover {
+            transform: scale(1.08);
+            filter: brightness(1.12) saturate(1.2);
+        }
 }
 
-/* ── LARGE (1025px+): 3 cols, card1 featured, card8 wide ── */
+
 @media (min-width: 1025px) {
     #discover-grid {
         grid-template-columns: 1fr 1fr 1fr;
@@ -62,7 +61,7 @@
     }
 }
 
-/* ── Cards ── */
+
 .attraction-card {
     background-color: var(--background);
     border: 1px solid var(--terracotta);
@@ -81,7 +80,7 @@
     padding: 0.65rem 1rem;
 }
 
-/* ── Figure & image hover effect ── */
+
 .attraction-card figure {
     margin: 0;
     overflow: hidden;
@@ -98,10 +97,7 @@
     transition: transform 0.4s ease, filter 0.4s ease;
 }
 
-.attraction-card figure img:hover {
-    transform: scale(1.08);
-    filter: brightness(1.12) saturate(1.2);
-}
+
 
 .attraction-card figure.no-image {
     display: flex;
@@ -116,8 +112,11 @@
 .attraction-card address {
     font-style: italic;
     font-size: 0.8rem;
-    color: var(--primary);
-    padding: 0.5rem 1rem 0;
+    /* font-weight: 700; */
+    color: #fff;
+    background-color: var(--deep-slate-blue);
+    padding: 0.5rem 1rem ;
+    border-bottom: 1px solid var(--terracotta);
 }
 
 .attraction-card p {
@@ -133,7 +132,7 @@
     padding: 0.5rem 1.25rem;
     align-self: flex-start;
     background-color: var(--terracotta);
-    color: #fff;
+    color: #000;
     border: none;
     border-radius: 5px;
     font-weight: 700;
@@ -144,10 +143,11 @@
 
 .attraction-card button:hover {
     background-color: var(--deep-slate-blue);
+    color: #fff;
 }
 
-/* ── Featured card (large screen): taller image to fill extra rows ── */
-@media (min-width: 1025px) {
+
+/* @media (min-width: 1025px) {
     .card-1 .attraction-card,
     .card-1 {
         height: 100%;
@@ -161,4 +161,4 @@
     .card-1 figure img {
         height: 100%;
     }
-}
+} */

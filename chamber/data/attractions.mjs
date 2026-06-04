@@ -19,35 +19,35 @@ const afattractions = {
             name: "American Fork DUP Museum",
             address: "50 S 100 E, American Fork, UT 84003",
             description: "Museum preserving pioneer history and artifacts from early settlers of the area.",
-            image: "dup-museum.png"
+            image: "dup-museum.webp"
         },
         {
             id: 4,
             name: "William S. Robinson Park",
             address: "100 E Main St, American Fork, UT 84003",
             description: "Historic downtown park featuring mature trees, green space, and community events.",
-            image: "robinson-park.png"
+            image: "robinson-park.webp"
         },
         {
             id: 5,
             name: "American Fork Amphitheater",
             address: "851 E 700 N, American Fork, UT 84003",
             description: "Historic stone amphitheater used for concerts, performances, weddings, and photography.",
-            image: "af-amphitheater.png"
+            image: "af-amphitheater.webp"
         },
         {
             id: 6,
             name: "American Fork Lion's Park",
             address: "100 S 300 W, American Fork, UT 84003",
             description: "Family-friendly park with playgrounds, open lawns, and recreational facilities.",
-            image: "lions-park.png"
+            image: "lions-park.webp"
         },
         {
             id: 7,
             name: "Greenwood Park",
             address: "200 E 500 S, American Fork, UT 84003",
             description: "Community park offering playgrounds, picnic areas, and shaded open spaces.",
-            image: ""
+            image: "greenwood-park.webp"
         },
         {
             id: 8,

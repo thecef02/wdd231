@@ -35,7 +35,7 @@ async function loadAttractions() {
         if (image) {
             const img = document.createElement('img');
             img.src = `images/${image}`;
-            img.alt = name;
+            img.alt = `Picture of ${name}`;
             img.loading = 'lazy';
             img.width = 300;
             img.height = 200;
