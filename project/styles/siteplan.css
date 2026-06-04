@@ -8,7 +8,7 @@
     --accent: #D82C41;
     --rised: #2a2a2a;
 }
-header,
+.headerSitePlan,
 main,
 footer {
     max-width: 1000px;
@@ -16,7 +16,7 @@ footer {
     padding: 0 1rem;
 }
 
-header {
+.headerSitePlan {
     background-color: var(--primary);
     color: #111;
     padding: 1.5rem;
@@ -24,12 +24,12 @@ header {
     margin: 1.5rem auto;
 }
 
-header h1 {
+.headerSitePlan h1 {
     margin-bottom: 0.5rem;
     color: #111;
 }
 
-header p {
+.headerSitePlan p {
     color: #1a1a1a;
     margin-bottom: 0;
 }
