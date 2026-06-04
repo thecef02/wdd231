@@ -35,3 +35,10 @@ async function displayParks() {
 }
 
 displayParks();
+
+
+
+// fullName en laparte superior, imagen del tamaño de la carta descripcion, state, city, phoneNumber(el primero), email, boton para mas info , weather info en la parte de abajo,
+// usando....
+
+// info en una modal: entrance fee, passes, directioninfo, url, operation hrs, lista de actividades
