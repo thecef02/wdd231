@@ -7,6 +7,7 @@
     font-weight: 700;
     letter-spacing: 0.03em;
 }
+
 #discover-grid {
     display: grid;
     gap: 1rem;
@@ -23,14 +24,37 @@
         "card8";
 }
 
-.card-1 { grid-area: card1; }
-.card-2 { grid-area: card2; }
-.card-3 { grid-area: card3; }
-.card-4 { grid-area: card4; }
-.card-5 { grid-area: card5; }
-.card-6 { grid-area: card6; }
-.card-7 { grid-area: card7; }
-.card-8 { grid-area: card8; }
+.card-1 {
+    grid-area: card1;
+}
+
+.card-2 {
+    grid-area: card2;
+}
+
+.card-3 {
+    grid-area: card3;
+}
+
+.card-4 {
+    grid-area: card4;
+}
+
+.card-5 {
+    grid-area: card5;
+}
+
+.card-6 {
+    grid-area: card6;
+}
+
+.card-7 {
+    grid-area: card7;
+}
+
+.card-8 {
+    grid-area: card8;
+}
 
 
 @media (min-width: 641px) and (max-width: 1024px) {
@@ -58,10 +82,25 @@
     }
 }
 
-    .attraction-card figure img:hover {
-        transform: scale(1.08);
-        filter: brightness(1.12) saturate(1.2);
-    }
+/* ── Skeleton loading ── */
+.attraction-card.skeleton {
+    min-height: 380px;
+    background: linear-gradient(90deg, #e0e0e0 25%, #ececec 50%, #e0e0e0 75%);
+    background-size: 200% 100%;
+    animation: skeleton-shimmer 1.5s infinite;
+    border: 1px solid #ccc;
+}
+
+@keyframes skeleton-shimmer {
+    0%   { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+}
+
+.attraction-card figure img:hover {
+    transform: scale(1.08);
+    filter: brightness(1.12) saturate(1.2);
+}
+
 .attraction-card {
     background-color: var(--background);
     border: 1px solid var(--terracotta);
@@ -115,7 +154,7 @@
     /* font-weight: 700; */
     color: #fff;
     background-color: var(--deep-slate-blue);
-    padding: 0.5rem 1rem ;
+    padding: 0.5rem 1rem;
     border-bottom: 1px solid var(--terracotta);
 }
 
@@ -140,7 +179,7 @@
     cursor: pointer;
     /* transition: background-color 0.2s ease; */
     transition: all 0.3s ease;
-position: relative;
+    position: relative;
     display: inline-block;
     box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5),
         7px 7px 20px 0px rgba(0, 0, 0, .1),
@@ -153,9 +192,11 @@ position: relative;
     0% {
         font-size: 0.9rem;
     }
-
-    100% {
+    50% {
         font-size: 1.1rem;
+    }
+    100% {
+        font-size: 0.9rem;
     }
 }
 

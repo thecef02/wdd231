@@ -25,8 +25,8 @@ async function loadAttractions() {
     const grid = document.getElementById('discover-grid');
 
     attractions.forEach(({ id, name, address, description, image }) => {
-        const article = document.createElement('article');
-        article.className = `attraction-card card-${id}`;
+        const article = grid.querySelector(`.card-${id}`);
+        article.classList.remove('skeleton');
 
         const h2 = document.createElement('h2');
         h2.textContent = name;
@@ -36,9 +36,13 @@ async function loadAttractions() {
             const img = document.createElement('img');
             img.src = `images/${image}`;
             img.alt = `Picture of ${name}`;
-            img.loading = 'lazy';
-            img.width = 300;
-            img.height = 200;
+            img.width = 400;//no usar 300x200
+            img.height = 225;
+            if (id === 1) {
+                img.fetchPriority = 'high';
+            } else {
+                img.loading = 'lazy';
+            }
             figure.appendChild(img);
         } else {
             figure.classList.add('no-image');
@@ -59,7 +63,6 @@ async function loadAttractions() {
         btn.textContent = 'Learn More';
 
         article.append(h2, figure, addr, p, btn);
-        grid.appendChild(article);
     });
 }
 
