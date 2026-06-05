@@ -10,7 +10,7 @@ const forecastUrl =
 
 const currentUrl =
     "https://api.openweathermap.org/data/2.5/weather?lat=40.376&lon=-111.795&units=imperial&appid=a1cdf4d637caf46a9288686067728afa";
-
+  //"https://api.openweathermap.org/data/2.5/weather?lat=38.72261844&lon=-109.5863666&units=imperial&appid=a1cdf4d637caf46a9288686067728afa";
 
 async function apiFetch(url) {
     try {
@@ -25,6 +25,7 @@ async function apiFetch(url) {
         return null; // el caller puede hacer: if (data) { ... }
     }
 }
+
 
 async function buildForecastWeatherCard(url) {
     const data = await apiFetch(url);

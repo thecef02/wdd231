@@ -1,0 +1,286 @@
+﻿/* â”€â”€ Hero â”€â”€ */
+.hero {
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+
+.hero img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    display: block;
+    border-radius: 0 0 12px 12px;
+}
+
+.hero h1 {
+    position: absolute;
+    top: 1rem;
+    left: 1.25rem;
+    color: #fff;
+    font-size: 1.4rem;
+    margin: 0;
+    text-shadow: 0 2px 6px rgba(0,0,0,0.7);
+}
+
+.hero p {
+    position: absolute;
+    bottom: 1rem;
+    left: 1.25rem;
+    right: 1.25rem;
+    color: #eee;
+    font-size: 0.8rem;
+    margin: 0;
+    text-shadow: 0 1px 4px rgba(0,0,0,0.8);
+    display: none;
+}
+
+
+.parks-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 0 1rem 2rem;
+}
+
+
+.park-card {
+    background-color: #2a2a2a;
+    border: 1px solid var(--primary-hover);
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.4);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.park-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+}
+
+.park-card > img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.park-card h2 {
+    color: var(--primary);
+    font-size: 1rem;
+    padding: 0.75rem 1rem 0.25rem;
+    margin: 0;
+    line-height: 1.3;
+}
+
+.park-card > p {
+    color: var(--text);
+    font-size: 0.82rem;
+    padding: 0.25rem 1rem 0.75rem;
+    margin: 0;
+    flex: 1;
+    line-height: 1.5;
+}
+
+
+.card-buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.6rem 1rem;
+    background-color: #1e1e1e;
+    flex-wrap: wrap;
+    border-top: 1px solid var(--primary-hover);
+}
+
+.card-buttons > p {
+    margin: 0;
+    font-size: 0.78rem;
+    color: var(--text);
+    flex: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.set-as-favorite-park {
+    cursor: pointer;
+    filter: brightness(0.8);
+    transition: filter 0.2s ease, transform 0.2s ease;
+    flex-shrink: 0;
+}
+
+.set-as-favorite-park:hover {
+    filter: brightness(1.3);
+    transform: scale(1.15);
+}
+
+
+.card-buttons a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: 700;
+    padding: 0.3rem 0.75rem;
+    border: 2px solid var(--primary);
+    border-radius: 4px;
+    flex-shrink: 0;
+    position: relative;
+    overflow: hidden;
+    background-color: transparent;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+/* cambiamos el efecto */
+.card-buttons a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 60%;
+    height: 100%;
+    background: linear-gradient(
+        120deg,
+        transparent 0%,
+        rgba(255, 255, 255, 0.4) 50%,
+        transparent 100%
+    );
+    transition: left 0.45s ease;
+}
+
+.card-buttons a:hover {
+    background-color: var(--primary);
+    border-color: var(--primary);
+}
+
+.card-buttons a:hover::before {
+    left: 150%;
+}
+
+
+.card-buttons button.park-info {
+    background-color: var(--accent);
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 0.35rem 0.85rem;
+    font-weight: 700;
+    font-size: 0.8rem;
+    cursor: pointer;
+    flex-shrink: 0;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card-buttons button.park-info::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255,255,255,0.25);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.4s ease, height 0.4s ease;
+}
+
+.card-buttons button.park-info:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 14px rgba(216, 44, 65, 0.5);
+}
+
+.card-buttons button.park-info:hover::after {
+    width: 200px;
+    height: 200px;
+}
+
+
+.weather {
+    background-color: #1a1a1a;
+    padding: 0.75rem 1rem;
+    border-top: 1px solid var(--primary-hover);
+}
+
+.weather-info {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    align-items: stretch;
+}
+
+
+
+
+.forecast-cards, .current-cards-holder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to bottom right, #b8e4f9 10%, #ffe066 75%, #ccae02ce);
+    border-radius: 8px;
+    gap: 0.15rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    transition: transform 0.2s ease;
+}
+
+
+.current-cards-holder {
+    padding: 0.5rem 0.6rem;
+    min-width: 68px;
+}
+
+.current-cards-holder p, .forecast-cards p {
+    margin: 0;
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: #333;
+    text-align: center;
+}
+
+.current-cards-holder img {
+    width: 64px;
+    height: 64px;
+}
+
+.forecast-cards-holder {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    flex: 1;
+}
+
+.forecast-cards{
+    padding: 0.5rem 0.4rem;
+    flex: 1;
+}
+
+.forecast-cards:hover, .current-cards-holder:hover {
+    transform: scale(1.04);
+}
+
+.forecast-cards img {
+    width: 38px;
+    height: 38px;
+}
+
+/* â”€â”€ Responsive â”€â”€ */
+@media (min-width: 640px) {
+    .hero p { display: block; }
+    .hero h1 { font-size: 1.8rem; }
+
+    .parks-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .parks-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .hero img { height: 360px; }
+    .hero h1 { font-size: 2.2rem; }
+}
