@@ -36,4 +36,82 @@
     .hamburger {
         display: none;
     }
+
+    .hero p {
+        display: block;
+        font-size: 1.0rem;
+        margin: 0 1rem;
+        text-shadow: 0 1px 4px rgba(0, 0, 0, 0.8);
+    }
+
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+}
+
+
+
+
+@media (min-width: 1024px) {
+
+    .hero p {
+        display: block;
+        font-size: 1.2rem;
+        margin: 0 5rem;
+        text-shadow: 0 1px 4px rgba(0, 0, 0, 0.8);
+    }
+
+    .hero img {
+        height: 360px;
+    }
+
+    .hero h1,
+    .parks-holder h2 {
+        font-size: 2.2rem;
+    }
+
+    /* park: primera imagen + info lado a lado, more-images abajo full width */
+    .park {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto;
+    }
+
+    .park > img {
+        height: 100%;
+        min-height: 320px;
+        max-height: 420px;
+        grid-row: 1;
+    }
+
+    .park-info {
+        grid-row: 1;
+        padding: 1.75rem;
+    }
+
+    .more-images {
+        grid-column: 1 / -1;
+        grid-row: 2;
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .more-images img {
+        height: 200px;
+    }
 }

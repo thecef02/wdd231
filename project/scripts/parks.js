@@ -8,21 +8,21 @@ const currentUrlStr = "https://api.openweathermap.org/data/2.5/weather?lat="
 const currentUrlMid = "&lon=";
 const currentUrlEnd = "&units=imperial&appid=a1cdf4d637caf46a9288686067728afa"
 
+import { apiFetch } from "./main-functions.mjs";
 
-
-async function apiFetch(url) {
-    try {
-        const response = await fetch(url);
-        if (!response.ok) {
-            throw new Error(`HTTP error! status: ${response.status}`);
-        }
-        const data = await response.json();
-        return data;
-    } catch (error) {
-        console.error("Error fetching API data:", error);
-        throw error;
-    }
-}  
+// async function apiFetch(url) {
+//     try {
+//         const response = await fetch(url);
+//         if (!response.ok) {
+//             throw new Error(`HTTP error! status: ${response.status}`);
+//         }
+//         const data = await response.json();
+//         return data;
+//     } catch (error) {
+//         console.error("Error fetching API data:", error);
+//         throw error;
+//     }
+// }  
 
 async function buildCurrentWeatherCard(url, parkId) {
     const data = await apiFetch(url);
@@ -99,20 +99,24 @@ async function buildWeatherInfo(parkData) {
 
 
 
+let parksData = [];
+
 async function displayParks() {
     try {
         const data = await apiFetch(url);
         const parksContainer = document.querySelector(".parks-container");
         const data2 = data.data.filter(park => park.states.includes("UT"));
-        console.log(data2.length);// Verificar cuÃ¡ntos parques se han filtrado
+        parksData = data2;
+        //console.log(data2.length);// Verificar cuantos parques se han filtrado
         for (const park of data2) {
             const weatherInfo = await buildWeatherInfo(park);
             // alert(weatherInfo.innerHTML); // Verificar que weatherInfo se estÃ¡ creando correctamente
             
             const parkCard = document.createElement("div");
             parkCard.classList.add("park-card");
+            const randImg = Math.floor(Math.random() * park.images.length || 1); // Si no hay imagenes, usar 0 para evitar NaN
             parkCard.innerHTML = `
-            <img src="${park.images[0]?.url || "placeholder.jpg"}" alt="${park.fullName}">
+            <img src="${park.images[randImg]?.url || "placeholder.jpg"}" alt="${park.fullName}" loading="lazy" width="600" height="400">
             <h2>${park.fullName}</h2>
             <p>${park.description}</p>
             <div class="card-buttons">
@@ -162,14 +166,93 @@ function isFavorite(parkId) {
 displayParks();
 
 
+
+function buildDialogContent(parkID) {
+    const park = parksData.find(p => p.id === parkID);
+    if (!park) return "<p>Park not found.</p>";
+
+    const heroImg = park.images[0]
+        ? `<img src="${park.images[0].url}" alt="${park.images[0].altText || park.fullName}" class="modal-hero-img">`
+        : "";
+
+    const fees = park.entranceFees.length
+        ? park.entranceFees.map(f => `<li><strong>$${parseFloat(f.cost).toFixed(2)}</strong> — ${f.title}</li>`).join("")
+        : "<li>No entrance fee</li>";
+
+    const passes = park.entrancePasses.length
+        ? park.entrancePasses.map(p => `<li><strong>$${parseFloat(p.cost).toFixed(2)}</strong> — ${p.title}</li>`).join("")
+        : "<li>No passes available</li>";
+
+    const hoursHTML = park.operatingHours.length
+        ? park.operatingHours.map(oh => {
+            const d = oh.standardHours;
+            return `
+                <div class="hours-block">
+                    <p class="hours-name">${oh.name}</p>
+                    <ul class="hours-list">
+                        <li><span>Mon</span>${d.monday}</li>
+                        <li><span>Tue</span>${d.tuesday}</li>
+                        <li><span>Wed</span>${d.wednesday}</li>
+                        <li><span>Thu</span>${d.thursday}</li>
+                        <li><span>Fri</span>${d.friday}</li>
+                        <li><span>Sat</span>${d.saturday}</li>
+                        <li><span>Sun</span>${d.sunday}</li>
+                    </ul>
+                </div>`;
+        }).join("")
+        : "<p>Hours not available</p>";
+
+    const activities = park.activities.length
+        ? `<ul class="activities-list">${park.activities.map(a => `<li>${a.name}</li>`).join("")}</ul>`
+        : "<p>No activities listed</p>";
+
+    const directionsSection = park.directionsInfo
+        ? `<section class="modal-section s5">
+                <h3>Directions</h3>
+                <p>${park.directionsInfo}</p>
+                ${park.directionsUrl ? `<a href="${park.directionsUrl}" target="_blank" class="modal-link">View on Map ↗</a>` : ""}
+           </section>`
+        : "";
+
+    return `
+        ${heroImg}
+        <h2 id="modal-np-title-2">${park.fullName}</h2>
+        <p class="modal-description">${park.description}</p>
+        <div class="modal-sections">
+            <section class="modal-section s1">
+                <h3>Entrance Fees</h3>
+                <ul>${fees}</ul>
+            </section>
+            <section class="modal-section s2">
+                <h3>Passes</h3>
+                <ul>${passes}</ul>
+            </section>
+            <section class="modal-section s3">
+                <h3>Operating Hours</h3>
+                ${hoursHTML}
+            </section>
+            <section class="modal-section s4 activities">
+                <h3>Activities</h3>
+                ${activities}
+            </section>
+            ${directionsSection}
+        </div>
+        <a href="${park.url}" target="_blank" class="modal-website-btn">Visit Official Website ↗</a>
+    `;
+}
+
+
+
 document.querySelector(".parks-container").addEventListener("click", (e) => {
     const btn = e.target.closest(".park-info");
     if (btn) {
+        const dialogContent = buildDialogContent(btn.dataset.parkId);
+        document.getElementById(btn.dataset.modal).querySelector(".modal-content").innerHTML = dialogContent;
         document.getElementById(btn.dataset.modal).showModal();
     }
     const heart = e.target.closest(".set-as-favorite-park");
     if (heart) {
-        const parkId = heart.dataset.parkId;
+        const parkId = heart.dataset.parkId; // Obtener el ID del parque desde el atributo data-park-id
         const isNowFav = toggleFavorite(parkId);
         heart.src = `images/${isNowFav ? "heart-selected" : "heart-unselected"}.svg`;
         heart.alt = isNowFav ? "Remove from Favorites" : "Set as Favorite";

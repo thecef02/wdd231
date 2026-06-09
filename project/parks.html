@@ -27,8 +27,9 @@
     <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/larger.css">
     <link rel="stylesheet" href="styles/parks.css">
+    <script src="scripts/main-functions.mjs" type="module" defer></script>
     <script src="scripts/core.js" defer></script>
-    <script src="scripts/parks.js" defer></script>
+    <script src="scripts/parks.js" type="module"></script>
 
 </head>
 
@@ -52,7 +53,7 @@
 
     <main>
         <section class="hero">
-            <img src="images/hero.webp" alt="hero image" width="1200" height="400">
+            <img src="images/hero-parks.webp" alt="hero image" width="1200" height="400">
         <h1>Explore Utah's National Parks</h1>
         <p>Discover the breathtaking beauty of Utah's national parks. From the iconic arches of Arches National Park to the stunning canyons of Zion, each park offers unique landscapes and unforgettable experiences. Whether you're seeking adventure, tranquility, or a connection with nature, Utah's national parks have something for everyone.</p>
         </section>
@@ -62,18 +63,19 @@
         <section>
 
         </section>
-                <!-- Modals -->
-                <dialog id="modal-park-info" aria-labelledby="modal-np-title">
-                    <h2 id="modal-np-title">Park Information</h2>
-                    <p><strong>Cost:</strong> Free</p>
-                    <ul>
-                        <li>Basic business directory listing</li>
-                        <li>Access to community networking events</li>
-                        <li>Monthly chamber newsletter</li>
-                        <li>Certificate of membership</li>
-                    </ul>
-                    <button class="modal-close" aria-label="Close">Close</button>
-                </dialog>
+                
+
+
+        <dialog id="modal-park-info" aria-labelledby="modal-np-title">
+            <h2 id="modal-np-title" hidden>h2</h2>
+            <button class="modal-close" aria-label="Close modal">&#x2715;</button>
+            <div class="modal-content">
+                
+            </div>
+        </dialog>
+
+
+
     </main>
     <footer>
         <div class="last-updated">

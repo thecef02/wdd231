@@ -124,12 +124,344 @@ nav ul li.current a {
 }
 
 
+/********** Main *****************/
+
+.hero {
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+
+.hero img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    display: block;
+    border-radius: 0 0 12px 12px;
+}
+
+.hero h1 {
+    position: absolute;
+    top: 1rem;
+    left: 1.25rem;
+    color: #fff;
+    font-size: 1.4rem;
+    margin: 0;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.7);
+}
+
+.hero p {
+    position: absolute;
+    bottom: 1rem;
+    left: 1.25rem;
+    right: 1.25rem;
+    color: #eee;
+    font-size: 0.8rem;
+    margin: 0;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.8);
+    display: none;
+}
+
+
+
+
+/******************** PARKS ********************/
+
+.parks-holder {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.parks-holder > h2 {
+    color: var(--primary);
+    font-size: 1.4rem;
+    margin: 0 0 0.5rem;
+}
+
+.park {
+    background-color: var(--rised);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.4);
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.park > img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    display: block;
+}
+
+.park-info {
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.park-info h2 {
+    color: var(--primary);
+    font-size: 1.1rem;
+    margin: 0;
+    line-height: 1.3;
+}
+
+.park-info > p {
+    color: var(--text);
+    font-size: 0.83rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.park-info .contacts {
+    background-color: #1e1e1e;
+    border-radius: 6px;
+    padding: 0.6rem 0.85rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+}
+
+.park-info .contacts p {
+    margin: 0;
+    font-size: 0.78rem;
+    color: var(--text);
+}
+
+.park-link {
+    color: var(--secondary);
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 0.82rem;
+}
+
+.park-link:hover {
+    text-decoration: underline;
+}
+
+.more-images {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3px;
+    border-top: 3px solid var(--body-bg);
+}
+
+.more-images img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease, brightness 0.3s ease;
+}
+
+.more-images img:hover {
+    transform: scale(1.03);
+    filter: brightness(1.12) saturate(1.15);
+}
+
+
+/******************** PARKS TABLE ********************/
+
+.parks-fees-table-holder {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 1rem;
+    overflow-x: auto;
+}
+
+.parks-fees-table-holder h2 {
+    color: var(--primary);
+    font-size: 1.4rem;
+    margin: 0 0 1rem;
+}
+
+.parks-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.82rem;
+    background-color: #1e1e1e;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
+}
+
+.parks-table thead tr {
+    background-color: var(--accent);
+}
+
+.parks-table th {
+    color: #fff;
+    font-weight: 700;
+    text-align: center;
+    padding: 0.85rem 1rem;
+    font-size: 0.85rem;
+    letter-spacing: 0.04em;
+    border-right: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.parks-table th:last-child {
+    border-right: none;
+}
+
+.parks-table tbody tr:nth-child(odd) {
+    background-color: #2a2a2a;
+}
+
+.parks-table tbody tr:nth-child(even) {
+    background-color: #222;
+}
+
+.parks-table tbody tr:hover {
+    background-color: #333;
+}
+
+.parks-table td {
+    padding: 0.75rem 1rem;
+    vertical-align: top;
+    border-right: 1px solid var(--primary-hover);
+    border-bottom: 1px solid var(--primary-hover);
+    color: var(--text);
+    line-height: 1.5;
+}
+
+.parks-table td:last-child {
+    border-right: none;
+}
+
+.col-park {
+    color: var(--accent);
+    font-weight: 700;
+    font-size: 0.88rem;
+    text-align: center;
+    min-width: 120px;
+}
+
+.col-list ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    max-height: 220px;
+    overflow-y: auto;
+}
+
+.col-list ul li {
+    font-size: 0.78rem;
+    padding: 0.15rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.col-list ul li:last-child {
+    border-bottom: none;
+}
+
+.col-fee {
+    min-width: 180px;
+}
+
+.fee-entry {
+    margin-bottom: 0.6rem;
+    padding-bottom: 0.6rem;
+    border-bottom: 1px dashed var(--primary-hover);
+}
+
+.fee-entry:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.fee-entry strong {
+    color: var(--primary);
+    font-size: 0.85rem;
+}
+
+.fee-entry p {
+    margin: 0.2rem 0 0;
+    font-size: 0.75rem;
+    color: #999;
+    line-height: 1.4;
+}
 
 
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/******************** Footer ********************/
+footer {
+    background: #2a2a2a;
+    padding: 1rem 0;
+    border-top: 2px solid var(--primary-hover);
+    border-bottom: 2px solid var(--primary-hover);
+}
+
+/* footer .social-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    background: white;
+    padding: 1rem 0;
+}
+
+footer .social-links a {
+    display: inline-flex;
+}
+
+footer .social-links img {
+    display: block;
+    width: 48px;
+    height: auto;
+} */
+
+footer .last-updated {
+    background: var(--primary-hover);
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+footer .last-updated p {
+    margin: 0.25rem 0;
+}
 
 
 
