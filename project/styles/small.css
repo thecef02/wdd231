@@ -172,7 +172,7 @@ nav ul li.current a {
     padding: 1rem;
     display: flex;
     flex-direction: column;
-    gap: 2.5rem;
+    gap: 5rem;
 }
 
 .parks-holder > h2 {
@@ -347,8 +347,8 @@ nav ul li.current a {
     margin: 0;
     display: flex;
     flex-direction: column;
-    gap: 0.2rem;
-    max-height: 220px;
+    gap: 0.1rem;
+    max-height: 320px;
     overflow-y: auto;
 }
 

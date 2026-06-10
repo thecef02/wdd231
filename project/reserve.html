@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -26,7 +26,9 @@
     <link rel="stylesheet" href="../normalize.css">
     <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/larger.css">
+    <link rel="stylesheet" href="styles/reserve.css">
     <script src="scripts/core.js" defer></script>
+    <script src="scripts/reserve.js" defer></script>
 
 </head>
 
@@ -40,6 +42,7 @@
                 <li class="current"><a href="reserve.html">Reserve Now</a></li>
                 <li><a href="parks.html">Parks</a></li>
                                 <li><a href="siteplan.html">Site Plan</a></li>
+                                <li><a href="../index.html">Main</a></li>
             </ul>
         </nav> <button id="nav-button" class="hamburger" aria-label="navigation">
             <span></span>
@@ -49,7 +52,220 @@
     </header>
 
     <main>
+        <section class="reserve-hero">
+            <h1>Reserve Your Visit</h1>
+            <p>Plan your Utah's Mighty Five experience â€” lodging, park entry, or guided activities.</p>
+        </section>
 
+        <form class="reserve-form" id="reserve-form" method="get" action="thankyou.html">
+
+            <!-- Reservation -->
+            <fieldset class="form-section">
+                <legend>Reservation Type</legend>
+                <div class="radio-group">
+                    <label class="radio-card">
+                        <input type="radio" name="reservation-type" value="stay" required checked>
+                        <span class="radio-icon">&#x26FA;</span>
+                        <span>Lodging / Camping</span>
+                    </label>
+                    <label class="radio-card">
+                        <input type="radio" name="reservation-type" value="access">
+                        <span class="radio-icon">&#x1F3AB;</span>
+                        <span>Park Entry</span>
+                    </label>
+                    <!-- <label class="radio-card">
+                        <input type="radio" name="reservation-type" value="activity">
+                        <span class="radio-icon">&#x1F9D7;</span>
+                        <span>Recreation Activity</span>
+                    </label> -->
+                </div>
+            </fieldset>
+
+            <!-- Visitor Information -->
+            <fieldset class="form-section">
+                <legend>Visitor Information</legend>
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="first-name">First Name <span class="required">*</span>
+                        <input type="text" id="first-name" name="first-name" required placeholder="John" autocomplete="given-name">
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <label for="last-name">Last Name <span class="required">*</span>
+                        <input type="text" id="last-name" name="last-name" required placeholder="Doe" autocomplete="family-name">
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email <span class="required">*</span>
+                        <input type="email" id="email" name="email" required placeholder="john@example.com" autocomplete="email">
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone <span class="required">*</span>
+                        <input type="tel" id="phone" name="phone" required placeholder="+1 (555) 000-0000" pattern="[\d\s\-\(\)]+"  autocomplete="tel">
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <label for="country">Country of Residence <span class="required">*</span></label>
+                        <select id="country" name="country" required>
+                            <option value="">Select country</option>
+                            <option value="US">United States</option>
+                            <option value="other">Other (surcharge may apply)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="id-number">Passport / ID Number</label>
+                        <input type="text" id="id-number" name="id-number" placeholder="Optional">
+                    </div>
+                </div>
+            </fieldset>
+
+            <!-- Lodging & Camping -->
+            <fieldset class="form-section section-stay">
+                <legend>Lodging &amp; Camping</legend>
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="stay-park">Park <span class="required">*</span></label>
+                        <select id="stay-park" name="stay-park" required>
+                            <option value="">Select park¦</option>
+                            <option value="arches">Arches National Park</option>
+                            <option value="bryce">Bryce Canyon National Park</option>
+                            <option value="canyonlands">Canyonlands National Park</option>
+                            <option value="capitol-reef">Capitol Reef National Park</option>
+                            <option value="zion">Zion National Park</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="accommodation">Accommodation Type <span class="required">*</span></label>
+                        <select id="accommodation" name="accommodation" required>
+                            <option value="">Select type</option>
+                            <option value="tent">Tent Camping</option>
+                            <option value="rv">RV / Car Camping</option>
+                            <option value="backcountry">Backcountry Camping</option>
+                            <option value="lodge">Lodge</option>
+                            <option value="cabin">Cabin</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="checkin">Check-in Date <span class="required">*</span>
+                        <input type="date" id="checkin" name="checkin" required></label>
+                    </div>
+                    <div class="form-group">
+                        <label for="checkout">Check-out Date <span class="required">*</span>
+                        <input type="date" id="checkout" name="checkout" required></label>
+                    </div>
+                    <div class="form-group">
+                        <label for="adults">Adults <span class="required">*</span>
+                        <input type="number" id="adults" name="adults" min="1" max="20" value="1" required></label>
+                    </div>
+                    <div class="form-group">
+                        <label for="minors">Minors (under 16)
+                        <input type="number" id="minors" name="minors" min="0" max="20" value="0"></label>
+                    </div>
+                    <div class="form-group">
+                        <label for="vehicles">Vehicles
+                        <input type="number" id="vehicles" name="vehicles" min="1" max="5" value="1"></label>
+                    </div>
+                    <div class="form-group">
+                        <label for="stay-site">Campsite / Site No.
+                        <input type="text" id="stay-site" name="stay-site" placeholder="e.g. A14 (if known)"></label>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group checkbox-group">
+                        <input type="checkbox" id="pet" name="pet">
+                        <label for="pet">Bringing a pet</label>
+                    </div>
+                    <div class="form-group">
+                        <label for="pet-info">Pet breed &amp; weight</label>
+                        <input type="text" id="pet-info" name="pet-info" placeholder="e.g. Labrador, 60 lbs">
+                    </div>
+                </div>
+                <div class="form-group full-width">
+                    <label for="special-equipment">Special Equipment</label>
+                    <textarea id="special-equipment" name="special-equipment" rows="2" placeholder="Generator, extra vehicles, large tents"></textarea>
+                </div>
+            </fieldset>
+
+            <!-- Park -->
+            <fieldset class="form-section section-access">
+                <legend>Park Entry / Timed Access</legend>
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="access-park">Park <span class="required">*</span></label>
+                        <select id="access-park" name="access-park" required>
+                            <option value="">Select park</option>
+                            <option value="arches">Arches National Park</option>
+                            <option value="bryce">Bryce Canyon National Park</option>
+                            <option value="canyonlands">Canyonlands National Park</option>
+                            <option value="capitol-reef">Capitol Reef National Park</option>
+                            <option value="zion">Zion National Park</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="entry-date">Visit Date <span class="required">*</span>
+                        <input type="date" id="entry-date" name="entry-date" required></label>
+                    </div>
+                    <div class="form-group">
+                        <label for="entry-window">Entry Window <span class="required">*</span></label>
+                        <select id="entry-window" name="entry-window" required>
+                            <option value="">Select window</option>
+                            <option value="6-9">6:00 AM - 9:00 AM</option>
+                            <option value="9-12">9:00 AM - 12:00 PM</option>
+                            <option value="12-15">12:00 PM - 3:00 PM</option>
+                            <option value="15-18">3:00 PM - 6:00 PM</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="vehicle-type">Vehicle Type <span class="required">*</span></label>
+                        <select id="vehicle-type" name="vehicle-type" required>
+                            <option value="">Select type</option>
+                            <option value="car">Car / SUV</option>
+                            <option value="motorcycle">Motorcycle</option>
+                            <option value="rv">RV / Motorhome</option>
+                            <option value="pedestrian">On Foot</option>
+                            <option value="bike">Bicycle</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="entry-people">Number of People <span class="required">*</span>
+                        <input type="number" id="entry-people" name="entry-people" min="1" max="25" value="1" required></label>
+                    </div>
+                    <div class="form-group">
+                        <label for="pass-number">Pass Number</label>
+                        <input type="text" id="pass-number" name="pass-number" placeholder="Optional">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group checkbox-group">
+                        
+                    </div>
+                </div>
+            </fieldset>
+
+            <!-- Confirmation -->
+            <fieldset class="form-section form-submit-section">
+                <legend>Confirmation</legend>
+                <div class="form-group checkbox-group">
+                    <input type="checkbox" id="terms" name="terms" required>
+                    <label for="terms">I accept the <a href="#" class="reserve-link">cancellation policy</a> and <a href="#" class="reserve-link">park regulations</a> <span class="required">*</span></label>
+                </div>
+                <div class="form-group checkbox-group">
+                    <input type="checkbox" id="leave-no-trace" name="leave-no-trace" required>
+                    <label for="leave-no-trace">I commit to Leave No Trace principles <span class="required">*</span></label>
+                </div>
+                <button type="submit" class="submit-btn">Submit Reservation</button>
+            </fieldset>
+
+        </form>
+
+                <dialog id="modal-park-info" aria-labelledby="modal-np-title">
+                    <h2 id="modal-np-title" hidden>h2</h2>
+                    <button class="modal-close" aria-label="Close modal">&#x2715;</button>
+                    <div class="modal-content">
+                
+                    </div>
+                </dialog>
     </main>
     <footer>
         <div class="last-updated">
@@ -60,3 +276,5 @@
 </body>
 
 </html>
+
+

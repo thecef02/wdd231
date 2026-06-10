@@ -27,10 +27,12 @@
         border-radius: 4px;
         border-left: none;
         border-bottom: 3px solid transparent;
+        border-right: 1px solid transparent;
     }
 
     nav ul li.current a {
         border-bottom-color: var(--rised);
+        border-right-color: var(--rised);
     }
 
     .hamburger {

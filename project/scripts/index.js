@@ -15,6 +15,7 @@ let parkDataTable = "";
 let counter = 0;
 
 
+
 function buildParksFeesTable(parkData) {
     const activities = parkData.activities.length
         ? parkData.activities.map(a => `<li>${a.name}</li>`).join("")
@@ -122,4 +123,7 @@ async function init() {
 
 
 await init();
+
+
+
 
