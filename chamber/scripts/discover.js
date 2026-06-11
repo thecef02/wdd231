@@ -62,7 +62,7 @@ async function loadAttractions() {
         btn.className = 'btn-5';
         btn.textContent = 'Learn More';
 
-        article.append(h2, figure, addr, p, btn);
+        article.append( figure,h2, addr, p, btn);
     });
 }
 

@@ -57,30 +57,7 @@
 }
 
 
-@media (min-width: 641px) and (max-width: 1024px) {
-    #discover-grid {
-        grid-template-columns: 1fr 1fr;
-        grid-template-areas:
-            "card1 card1"
-            "card2 card3"
-            "card4 card5"
-            "card6 card7"
-            "card8 card8";
-    }
 
-}
-
-
-@media (min-width: 1025px) {
-    #discover-grid {
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-areas:
-            "card1 card1 card2"
-            "card1 card1 card3"
-            "card4 card5 card6"
-            "card7 card8 card8";
-    }
-}
 
 /* ── Skeleton loading ── */
 .attraction-card.skeleton {
@@ -106,9 +83,16 @@
     border: 1px solid var(--terracotta);
     border-radius: 10px;
     overflow: hidden;
-    display: flex;
-    flex-direction: column;
+    /* display: flex; */
+    /* flex-direction: column; */
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    display: grid;
+    grid-template-areas: 
+    "pic"
+    "title"
+    "address"
+    "description"
+    "button";
 }
 
 .attraction-card h2 {
@@ -117,6 +101,7 @@
     font-size: 1rem;
     margin: 0;
     padding: 0.65rem 1rem;
+    grid-area: title;
 }
 
 
@@ -126,6 +111,7 @@
     flex-shrink: 0;
     aspect-ratio: 16 / 9;
     background-color: #ddd;
+    grid-area: pic;
 }
 
 .attraction-card figure img {
@@ -156,6 +142,7 @@
     background-color: var(--deep-slate-blue);
     padding: 0.5rem 1rem;
     border-bottom: 1px solid var(--terracotta);
+    grid-area: address;
 }
 
 .attraction-card p {
@@ -164,6 +151,7 @@
     padding: 0.4rem 1rem;
     flex: 1;
     margin: 0;
+    grid-area: description;
 }
 
 .attraction-card button {
@@ -185,6 +173,7 @@
         7px 7px 20px 0px rgba(0, 0, 0, .1),
         4px 4px 5px 0px rgba(0, 0, 0, .1);
     outline: none;
+    grid-area: button;
 }
 
 
@@ -268,3 +257,49 @@
         height: 100%;
     }
 } */
+
+
+@media (min-width: 641px) and (max-width: 1024px) {
+    #discover-grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "card1 card1"
+            "card2 card3"
+            "card4 card5"
+            "card6 card7"
+            "card8 card8";
+    }
+
+    .attraction-card {
+        display: grid;
+        grid-template-areas:
+        "button button"
+        "title address"
+        "pic pic"
+        
+        "description description"
+            ;
+    }
+}
+
+
+@media (min-width: 1025px) {
+    #discover-grid {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas:
+            "card1 card1 card2"
+            "card1 card1 card3"
+            "card4 card5 card6"
+            "card7 card8 card8";
+    }
+
+    .attraction-card {
+        display: grid;
+        grid-template-areas:
+        "title address"
+        "description button"
+        "pic pic"
+            
+            ;
+    }
+}
