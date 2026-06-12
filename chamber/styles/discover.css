@@ -8,8 +8,8 @@
     letter-spacing: 0.03em;
 }
 
-#discover-grid {
-    display: grid;
+/*#discover-grid {
+     display: grid;
     gap: 1rem;
     padding: 1rem;
     grid-template-columns: 1fr;
@@ -21,10 +21,10 @@
         "card5"
         "card6"
         "card7"
-        "card8";
-}
+        "card8"; 
+}*/
 
-.card-1 {
+/* .card-1 {
     grid-area: card1;
 }
 
@@ -54,7 +54,7 @@
 
 .card-8 {
     grid-area: card8;
-}
+} */
 
 
 
@@ -88,10 +88,10 @@
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     display: grid;
     grid-template-areas: 
-    "pic"
     "title"
-    "address"
+    "pic"
     "description"
+    "address"
     "button";
 }
 
@@ -102,6 +102,7 @@
     margin: 0;
     padding: 0.65rem 1rem;
     grid-area: title;
+    width: 100%;
 }
 
 
@@ -112,6 +113,7 @@
     aspect-ratio: 16 / 9;
     background-color: #ddd;
     grid-area: pic;
+    
 }
 
 .attraction-card figure img {
@@ -260,7 +262,7 @@
 
 
 @media (min-width: 641px) and (max-width: 1024px) {
-    #discover-grid {
+    /* #discover-grid {
         grid-template-columns: 1fr 1fr;
         grid-template-areas:
             "card1 card1"
@@ -268,38 +270,47 @@
             "card4 card5"
             "card6 card7"
             "card8 card8";
+    } */
+    .attraction-card figure img{
+        max-width: 320px;
     }
-
     .attraction-card {
         display: grid;
+        margin-bottom: 1rem;
         grid-template-areas:
-        "button button"
-        "title address"
-        "pic pic"
-        
-        "description description"
+        "pic title"
+        "pic description"
+        "pic address"
+        "pic button"
             ;
     }
 }
 
 
 @media (min-width: 1025px) {
-    #discover-grid {
+    /* #discover-grid {
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-areas:
             "card1 card1 card2"
             "card1 card1 card3"
             "card4 card5 card6"
             "card7 card8 card8";
-    }
+    } */
 
-    .attraction-card {
+   /* .attraction-card {
         display: grid;
-        grid-template-areas:
+        grid-template-columns: 1fr 1fr;
+         grid-template-areas:
         "title address"
         "description button"
         "pic pic"
             
-            ;
+            ; 
+    }*/
+
+    #discover-grid{
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: 1fr 1fr;
     }
 }

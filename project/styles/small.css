@@ -166,6 +166,20 @@ nav ul li.current a {
 
 /******************** PARKS ********************/
 
+@keyframes skeleton-shimmer {
+    0%   { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+}
+
+.park-skeleton {
+    min-height: 820px;
+    background: linear-gradient(90deg, #2a2a2a 25%, #3a3a3a 50%, #2a2a2a 75%);
+    background-size: 200% 100%;
+    animation: skeleton-shimmer 1.5s ease-in-out infinite;
+}
+
+
+
 .parks-holder {
     max-width: 1200px;
     margin: 0 auto;

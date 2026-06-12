@@ -51,58 +51,55 @@ function buildParksFeesTable(parkData) {
         </tr>`;
 }
 
-async function buildMighty5(parkId) {
-    const data = await apiFetch(urlStart + urlMid + parkId + urlFinish);
-    const parkContainer = document.querySelector(".parks-holder");
-    if (!data) return;
-    const currentCardHolder = document.createElement("section");
-    counter += 1;
-    currentCardHolder.classList.add("park", `park-${counter}`); 
-    let buildedHTML = "";
-    if (counter % 2 === 1) {
-        buildedHTML += `<img src="${data.data[0].images[0]?.url || "placeholder.jpg"}" alt="${data.data[0].fullName}" loading="lazy" width="600" height="400">`;
-    } // Si el contador es impar, la imagen va antes del texto. Si es par, el texto va antes de la imagen.
-    buildedHTML +=  `
+function buildParkHTML(parkData, index) {
+    const num = index + 1;
+    const img = (i) => `<img src="${parkData.images[i]?.url || "placeholder.jpg"}" alt="${parkData.fullName}" loading="lazy" width="600" height="400">`;
+
+    let html = num % 2 === 1 ? img(0) : "";
+    html += `
         <div class="park-info">
-            <h2>${data.data[0].fullName}</h2>
-            <p>${data.data[0].description}</p>
-            <p>General Topics:</P>
-            <p>${data.data[0].topics
+            <h2>${parkData.fullName}</h2>
+            <p>${parkData.description}</p>
+            <p>General Topics:</p>
+            <p>${parkData.topics
                 .slice(0, 10)
                 .filter((topic) => topic.name.split(" ").length >= 3)
                 .map((topic) => topic.name)
                 .join(", ")}</p>
-            <p>Contacts:</P>
+            <p>Contacts:</p>
             <div class="contacts">
-                <p>${data.data[0].contacts.phoneNumbers[0]?.phoneNumber || "No phone number available"}</p>
-                <p>${data.data[0].contacts.emailAddresses[0]?.emailAddress || "No email available"}</p>
-                <p>${data.data[0].contacts.emailAddresses[0]?.description || ""}</p>
+                <p>${parkData.contacts.phoneNumbers[0]?.phoneNumber || "No phone number available"}</p>
+                <p>${parkData.contacts.emailAddresses[0]?.emailAddress || "No email available"}</p>
+                <p>${parkData.contacts.emailAddresses[0]?.description || ""}</p>
             </div>
-            <p>Website: <a href="${data.data[0].url}" target="_blank" class="park-link">Visit Park Website</a></p>
-            <p>${data.data[0].addresses[0]?.city || ""}, ${data.data[0].addresses[0]?.stateCode || ""} ${data.data[0].addresses[0]?.postalCode || ""}</p>
-        </div>`
-    if (counter % 2 === 0) {
-        buildedHTML += `<img src="${data.data[0].images[0]?.url || "placeholder.jpg"}" alt="${data.data[0].fullName}" loading="lazy" width="600" height="400">`;
-    } // Si el contador es impar, la imagen va antes del texto. Si es par, el texto va antes de la imagen.
-    buildedHTML +=`
+            <p>Website: <a href="${parkData.url}" target="_blank" class="park-link">Visit Park Website</a></p>
+            <p>${parkData.addresses[0]?.city || ""}, ${parkData.addresses[0]?.stateCode || ""} ${parkData.addresses[0]?.postalCode || ""}</p>
+        </div>`;
+    html += num % 2 === 0 ? img(0) : "";
+    html += `
         <div class="more-images">
-            <img src="${data.data[0].images[1]?.url || "placeholder.jpg"}" alt="${data.data[0].fullName}" loading="lazy" width="600" height="400">
-            <img src="${data.data[0].images[2]?.url || "placeholder.jpg"}" alt="${data.data[0].fullName}" loading="lazy" width="600" height="400">
-            <img src="${data.data[0].images[3]?.url || "placeholder.jpg"}" alt="${data.data[0].fullName}" loading="lazy" width="600" height="400">
-            <img src="${data.data[0].images[4]?.url || "placeholder.jpg"}" alt="${data.data[0].fullName}" loading="lazy" width="600" height="400">
-        </div>
-        `;
-    currentCardHolder.innerHTML = buildedHTML;
-    parkContainer.appendChild(currentCardHolder);
-    parkDataTable += await buildParksFeesTable(data.data[0]);
+            ${[1, 2, 3, 4].map(i => img(i)).join("")}
+        </div>`;
+
+    const section = document.createElement("section");
+    section.classList.add("park", `park-${num}`);
+    section.innerHTML = html;
+    return section;
 }
 
-
-
 async function init() {
-    for (const parkId of mighty5) {
-        await buildMighty5(parkId);
-    }
+    const skeletons = document.querySelectorAll(".park-skeleton");
+
+    const results = await Promise.all(
+        mighty5.map(id => apiFetch(urlStart + urlMid + id + urlFinish))
+    );
+
+    results.forEach((data, index) => {
+        if (!data) return;
+        skeletons[index]?.replaceWith(buildParkHTML(data.data[0], index));
+        parkDataTable += buildParksFeesTable(data.data[0]);
+    });
+
     const tableHolder = document.querySelector(".parks-fees-table-holder");
     if (tableHolder) {
         tableHolder.innerHTML = `

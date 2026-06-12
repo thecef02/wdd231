@@ -23,8 +23,8 @@ async function buildCurrentWeatherCard(url, parkId) {
     const weatherIcon = document.createElement("img");
     weatherIcon.src = `https://openweathermap.org/img/w/${data.weather[0].icon}.png `;
     weatherIcon.alt = "Weather icon";
-    weatherIcon.width = 64;
-    weatherIcon.height = 64;
+    weatherIcon.width = 48;
+    weatherIcon.height = 48;
     currentTemp.textContent = `${Math.round(data.main.temp)}Â°F`;
     currentCardsHolder.appendChild(current);
     currentCardsHolder.appendChild(weatherIcon);
@@ -108,7 +108,7 @@ async function displayParks() {
             <div class="card-buttons">
             <p><strong></strong> ${park.addresses[0]?.city || "N/A"} <strong>, </strong> ${park.states}</p>
             <img class="set-as-favorite-park" data-park-id="${park.id}" src="images/heart-unselected.svg" width="24" height="24" alt="Set as Favorite">
-            <a href="${park.url}" target="_blank">Learn More</a>
+            <a href="${park.url}" target="_blank">Web site</a>
             <button class="park-info" data-park-id="${park.id}" data-modal="modal-park-info" aria-haspopup="dialog">Park Info</button>
             </div>
             <div class="weather" > 
