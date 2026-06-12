@@ -426,7 +426,6 @@ nav ul li.current a {
 }
 .thank-you ul {
     list-style: none;
-    padding: 0;
     margin: 1rem 0;
     display: inline-block;
     background-color: #2a2a2a;
@@ -515,7 +514,14 @@ footer .last-updated {
 footer .last-updated p {
     margin: 0.25rem 0;
 }
+footer a{
+    color: var(--secondary);
+    font-size: 1rem;
 
+}
+footer a::after{
+    color: var(--secondary);
+}
 
 
 

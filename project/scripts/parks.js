@@ -10,20 +10,6 @@ const currentUrlEnd = "&units=imperial&appid=a1cdf4d637caf46a9288686067728afa"
 
 import { apiFetch } from "./main-functions.mjs";
 
-// async function apiFetch(url) {
-//     try {
-//         const response = await fetch(url);
-//         if (!response.ok) {
-//             throw new Error(`HTTP error! status: ${response.status}`);
-//         }
-//         const data = await response.json();
-//         return data;
-//     } catch (error) {
-//         console.error("Error fetching API data:", error);
-//         throw error;
-//     }
-// }  
-
 async function buildCurrentWeatherCard(url, parkId) {
     const data = await apiFetch(url);
     console.log(data);
