@@ -394,14 +394,67 @@ nav ul li.current a {
 
 
 
+/*********** thank you page  *************/
+.thank-you {
+    padding: 1rem;
+    text-align: center;
+}
 
+/* .thank-you-content {
+    margin: 0.5rem;
+    background: #f9f9f9;
+    border: solid 1px var(--text);
+    border-radius: 10px;
+    padding: 1rem;
+} */
 
+.thank-you h1 {
+    font-size: 1.5rem;
+    margin: 1rem 0;
+}
+.thank-you h1, .thank-you h2{
+    color:var(--primary);
+}
+.thank-you p strong {
+    padding: 0.2rem 0.5rem;
+    color: var(--text);
+    margin: 1rem 0;
+    background: var(--terracotta);
+}
+.thank-you ul.hidden-ul{
+    display: none;
+}
+.thank-you ul {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+    display: inline-block;
+    background-color: #2a2a2a;
+    padding: 2rem;
+    border-radius: 12px;
+    border: 1px solid var(--accent);
+    /* max-width: 320px; */
+    /* justify-content: center; */
+}
 
+.thank-you ul li {
+    display: grid;
+    grid-template-columns: 160px 1fr;
+    gap: 0.5rem;
+    padding: 0.2rem 0;
+}
 
+.thank-you ul li strong {
+    text-align: right;
+}
 
+.thank-you ul li span {
+    text-align: left;
+}
 
-
-
+#full-name, #park-name{
+    color: var(--secondary);
+}
 
 
 

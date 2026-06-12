@@ -24,7 +24,7 @@ document.querySelectorAll('input[name="reservation-type"]').forEach(radio => {
         if (radio.value === "stay") {
             showSection(sectionStay);
             hideSection(sectionAccess);
-        } else if (radio.value === "access") {
+        } else if (radio.value === "park-access") {
             showSection(sectionAccess);
             hideSection(sectionStay);
         }

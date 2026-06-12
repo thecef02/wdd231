@@ -4,43 +4,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WDD 231 - Web Frontend Development I - Cristian Fernandez</title>
-    <meta name="description"
-        content="WDD 231 - Web Frontend Development I. Apply the concepts to a page that is responsive in both small and larger views." />
+    <title>Reservation Confirmed - National Parks</title>
+    <meta name="description" content="Your national park reservation has been confirmed." />
     <meta name="author" content="Cristian Fernandez" />
-
-    <meta property="og:title" content="WDD 231 - Web Frontend Development I">
-    <meta property="og:description"
-        content="Discover learning resources, projects, and insights from WDD 231 - Web Frontend Development I. Explore responsive design, web development techniques, and more." />
-    <meta property="og:url" content="https://thecef02.github.io/wdd231/index.html">
-    <meta property="og:image" content="https://thecef02.github.io/wdd231/images/logo.svg">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
-        media="print" onload="this.media='all'">
-    <noscript>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
-    </noscript>
     <link rel="icon" href="images/favicon.ico">
     <link rel="stylesheet" href="../normalize.css">
     <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/larger.css">
-    <script src="scripts/main-functions.mjs" type="module" defer></script>
     <script src="scripts/core.js" defer></script>
-    <script src="scripts/index.js" type="module"></script>
-
+    <script src="scripts/thankyou.js" defer></script>
 </head>
 
 <body>
     <header>
-
         <img src="images/np-logo.webp" alt="site logo" width="73" height="95">
         <nav>
             <ul>
-                <li class="current"><a href="index.html">Home</a></li>
-                <li><a href="reserve.html">Reserve Now</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li class="current"><a href="reserve.html">Reserve Now</a></li>
                 <li><a href="parks.html">Parks</a></li>
                 <li><a href="siteplan.html">Site Plan</a></li>
                 <li><a href="../index.html">Main</a></li>
@@ -53,14 +34,58 @@
         </button>
     </header>
 
-    <main>
-            </main>
-            <footer>
-                <div class="last-updated">
-                    <p>&copy; <span id="currentyear"></span></p>
-                    <p id="lastModified"></p>
-                </div>
-            </footer>
-            </body>
-            
-            </html>
+    <main class="thank-you">
+        <h1>Reservation Confirmed</h1>
+        <p>Thank you, <strong><span id="full-name"></span></strong>! Your reservation for
+            <strong><span id="park-name"></span></strong> has been received.
+        </p>
+
+        <section>
+            <h2>Personal Information</h2>
+            <ul>
+                <li><strong>Name:</strong> <span id="full-name-detail"></span></li>
+                <li><strong>Email:</strong> <span id="email"></span></li>
+                <li><strong>Phone:</strong> <span id="phone"></span></li>
+                <li><strong>Country:</strong> <span id="country"></span></li>
+                <li><strong>ID Number:</strong> <span id="id-number"></span></li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Reservation Details</h2>
+            <ul id="park-access-ul-id">
+                <li><strong>Reservation Type:</strong> <span id="reservation-type"></span></li>
+                <li><strong>Park:</strong> <span id="park-name-detail"></span></li>
+                <li><strong>Visite Date:</strong> <span id="entry-date"></span></li>
+                <li><strong>Entry Window:</strong> <span id="entry-window"></span></li>
+                <li><strong>Vehicle Type:</strong> <span id="vehicle-type"></span></li>
+                <li><strong>Number of people:</strong> <span id="entry-people"></span></li>
+                <li><strong>Pass Number:</strong> <span id="pass-number"></span></li>
+                <!-- num of peopel, pass num -->
+            </ul>
+            <ul id="stay-ul-id">
+                <li><strong>Reservation Type:</strong> <span id="stay-reservation-type"></span></li>
+                <li><strong>Park:</strong> <span id="stay-park-name-detail"></span></li>
+                <li><strong>Accommodation:</strong> <span id="accommodation"></span></li>
+                <li><strong>Check-in:</strong> <span id="checkin"></span></li>
+                <li><strong>Check-out:</strong> <span id="checkout"></span></li>
+                <li><strong>Nights:</strong> <span id="nights"></span></li>
+                <li><strong>Adults:</strong> <span id="adults"></span></li>
+                <li><strong>Minors:</strong> <span id="minors"></span></li>
+                <li><strong>Vehicles:</strong> <span id="vehicles"></span></li>
+                <li><strong>Stay Site:</strong> <span id="stay-site"></span></li>
+                <li><strong>Pet Info:</strong> <span id="pet-info"></span></li>
+                <li><strong>Special Equipment:</strong> <span id="special-equipment"></span></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <div class="last-updated">
+            <p>&copy; <span id="currentyear"></span></p>
+            <p id="lastModified"></p>
+        </div>
+    </footer>
+</body>
+
+</html>
