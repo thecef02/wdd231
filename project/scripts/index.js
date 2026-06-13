@@ -93,7 +93,7 @@ async function init() {
     const results = await Promise.all(
         mighty5.map(id => apiFetch(urlStart + urlMid + id + urlFinish))
     );
-
+    if (!results) return;
     results.forEach((data, index) => {
         if (!data) return;
         skeletons[index]?.replaceWith(buildParkHTML(data.data[0], index));
